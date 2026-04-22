@@ -4,7 +4,7 @@ index.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Manager Pro 2026 - Ultimate Global Edition</title>
+    <title>Rule The Club Poland Pack</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         :root { 
@@ -191,13 +191,22 @@ index.html
 <body>
 
 <div id="start-screen">
-    <h1 style="color:var(--text-main); font-size: 4em; margin-bottom: 5px; text-shadow: 0 0 30px rgba(255,255,255,0.2);">FOOTBALL MANAGER <span style="color:var(--accent)">PRO</span></h1>
-    <h3 style="color:var(--text-muted); margin-bottom: 50px; font-weight: 400;">WYBIERZ KLUB, KTÓRYM CHCESZ ZARZĄDZAĆ</h3>
+    <h1 style="color:var(--text-main); font-size: 4em; margin-bottom: 5px; text-shadow: 0 0 30px rgba(255,255,255,0.2);">RULE THE <span style="color:var(--accent)">CLUB</span></h1>
+    <h3 style="color:var(--text-muted); margin-bottom: 20px; font-weight: 400;">WYBIERZ KLUB, KTÓRYM CHCESZ ZARZĄDZAĆ</h3>
+    
+    <div style="display:flex; flex-direction:column; align-items:center; color:var(--warning); margin-bottom:40px; background: rgba(245, 158, 11, 0.1); padding: 15px; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.3); max-width: 450px; margin-left: auto; margin-right: auto;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" transform="rotate(90 12 12)"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+        </svg>
+        <span style="font-size: 13px; font-weight: bold; text-align: center; text-transform: uppercase;">Zalecane jest odwrócenie telefonu do pozycji poziomej, aby uzyskać lepsze wrażenia z gry.</span>
+    </div>
+
     <div id="clubs-container"></div>
 </div>
 
 <header>
-    <div>⚽ FM PRO 2026</div>
+    <div>RULE THE CLUB 
     <div id="seasonBox">Sezon 1</div>
 </header>
 
@@ -414,10 +423,36 @@ function populateStats(p) {
 
 const realSquads = {
     "Legia Warszawa": [
-        {name: "Kacper Tobiasz", pos: "GK", skill: 72, potential: 82, age: 21}, {name: "Artur Jędrzejczyk", pos: "DEF", skill: 69, potential: 69, age: 36},
-        {name: "Radovan Pankov", pos: "DEF", skill: 71, potential: 74, age: 28}, {name: "Steve Kapuadi", pos: "DEF", skill: 70, potential: 74, age: 26},
-        {name: "Paweł Wszołek", pos: "DEF", skill: 72, potential: 72, age: 32}, {name: "Bartosz Kapustka", pos: "MID", skill: 74, potential: 76, age: 27},
-        {name: "Luquinhas", pos: "MID", skill: 73, potential: 73, age: 27}, {name: "Marc Gual", pos: "ATT", skill: 73, potential: 73, age: 28}
+        {name: "Kacper Tobiasz", pos: "GK", skill: 72, potential: 82, age: 21, exactPos: "GK", secPos: []},
+        {name: "Gabriel Kobylak", pos: "GK", skill: 67, potential: 74, age: 22, exactPos: "GK", secPos: []},
+        {name: "Otto Hindrich", pos: "GK", skill: 68, potential: 76, age: 21, exactPos: "GK", secPos: []},
+        {name: "Radovan Pankov", pos: "DEF", skill: 71, potential: 74, age: 28, exactPos: "CB", secPos: ["RB"]},
+        {name: "Arkadiusz Reca", pos: "DEF", skill: 72, potential: 72, age: 28, exactPos: "LB", secPos: ["LM"]},
+        {name: "Rúben Vinagre", pos: "DEF", skill: 74, potential: 78, age: 25, exactPos: "LB", secPos: ["LM", "LWB"]},
+        {name: "Patryk Kun", pos: "DEF", skill: 70, potential: 70, age: 29, exactPos: "LWB", secPos: ["LM", "LB"]},
+        {name: "Petar Stojanović", pos: "DEF", skill: 73, potential: 73, age: 28, exactPos: "RB", secPos: ["RM"]},
+        {name: "Artur Jędrzejczyk", pos: "DEF", skill: 69, potential: 69, age: 36, exactPos: "CB", secPos: ["RB", "CDM"]},
+        {name: "Jan Leszczyński", pos: "DEF", skill: 62, potential: 78, age: 19, exactPos: "CB", secPos: []},
+        {name: "Kamil Piątkowski", pos: "DEF", skill: 74, potential: 80, age: 23, exactPos: "CB", secPos: ["RB"]},
+        {name: "Claude Gonçalves", pos: "MID", skill: 72, potential: 72, age: 30, exactPos: "CDM", secPos: ["CM"]},
+        {name: "Henrique Arreiol", pos: "MID", skill: 64, potential: 78, age: 22, exactPos: "CDM", secPos: ["CM"]},
+        {name: "Paweł Wszołek", pos: "MID", skill: 73, potential: 73, age: 32, exactPos: "RM", secPos: ["RWB", "RB"]},
+        {name: "Rafał Augustyniak", pos: "MID", skill: 71, potential: 71, age: 30, exactPos: "CDM", secPos: ["CB"]},
+        {name: "Kacper Chodyna", pos: "MID", skill: 70, potential: 75, age: 24, exactPos: "RM", secPos: ["RB"]},
+        {name: "Jakub Żewłakow", pos: "MID", skill: 60, potential: 82, age: 17, exactPos: "CAM", secPos: ["CM"]},
+        {name: "Vahan Biczachczjan", pos: "MID", skill: 74, potential: 77, age: 24, exactPos: "CAM", secPos: ["RW", "RM"]},
+        {name: "Juergen Elitim", pos: "MID", skill: 73, potential: 77, age: 24, exactPos: "CM", secPos: ["CDM"]},
+        {name: "Damian Szymański", pos: "MID", skill: 75, potential: 75, age: 28, exactPos: "CDM", secPos: ["CM"]},
+        {name: "Pascal Mozie", pos: "MID", skill: 61, potential: 80, age: 18, exactPos: "CDM", secPos: ["CM"]},
+        {name: "Wojciech Urbański", pos: "MID", skill: 64, potential: 81, age: 19, exactPos: "CAM", secPos: ["LW", "RW"]},
+        {name: "Bartosz Kapustka", pos: "MID", skill: 74, potential: 76, age: 27, exactPos: "CAM", secPos: ["CM", "LM"]},
+        {name: "Kacper Urbański", pos: "MID", skill: 72, potential: 86, age: 19, exactPos: "CAM", secPos: ["LW", "CM"]},
+        {name: "Samuel Kováčik", pos: "MID", skill: 63, potential: 77, age: 22, exactPos: "CAM", secPos: ["LW", "RW"]},
+        {name: "Rafał Adamski", pos: "ATT", skill: 66, potential: 74, age: 22, exactPos: "ST", secPos: []},
+        {name: "Antonio Čolak", pos: "ATT", skill: 73, potential: 73, age: 30, exactPos: "ST", secPos: []},
+        {name: "Jean-Pierre Nsame", pos: "ATT", skill: 72, potential: 72, age: 31, exactPos: "ST", secPos: []},
+        {name: "Mileta Rajović", pos: "ATT", skill: 71, potential: 76, age: 24, exactPos: "ST", secPos: []},
+        {name: "Ermal Krasniqi", pos: "ATT", skill: 72, potential: 77, age: 25, exactPos: "LW", secPos: ["ST", "RW"]}
     ],
     "Lech Poznań": [
         {name: "Bartosz Mrozek", pos: "GK", skill: 73, potential: 81, age: 24}, {name: "Joel Pereira", pos: "DEF", skill: 74, potential: 75, age: 27},
