@@ -4,7 +4,7 @@ index.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rule The Club Poland Pack</title>
+    <title>Rule The Club - Ultimate Expansion</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         :root { 
@@ -330,6 +330,132 @@ const plLn = ["Nowak", "Kowalski", "Wiśniewski", "Wójcik", "Kowalczyk", "Kami�
 const forFn = ["John", "James", "Pierre", "Jean", "Carlos", "Luis", "Alessandro", "Marco", "Hans", "Diego", "Pablo", "Liam", "Oliver", "Noah", "Lucas", "Mateo", "Leo", "Kevin", "Enzo", "Hugo", "Gabriel", "Kylian", "Jude", "Vinicius", "Rodrygo", "Fede", "Eduardo", "Dani", "Luka", "Toni", "David", "Nico", "Joselu", "Brahim", "Arda", "Robert", "Pedri", "Gavi", "Lamine", "Frenkie", "Ilkay", "Raphinha", "Joao", "Jules"];
 const forLn = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Rodriguez", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Perez", "Taylor", "Anderson", "Muller", "Schmidt", "Silva", "Rossi", "Ferrari", "Kante", "Dembele", "Mbappe", "Bellingham", "Junior", "Goes", "Valverde", "Camavinga", "Carvajal", "Modric", "Kroos", "Rudiger", "Alaba", "Lewandowski", "Gundogan", "Felix", "Kounde", "Christensen", "Araujo", "Alonso"];
 
+// --- PREMIER LEAGUE DATA PACK ---
+const plRaw = {
+    "Bournemouth": [
+        "Đorđe Petrović|BR|", "Fraser Forster|BR|", "Christos Mandas|BR|",
+        "Adrien Truffert|LO|LS", "Marcos Senesi|ŚO|LO", "Julio Soler|LO|LS", "Adam Smith|PO|LO,ŚO", "Bafodé Diakité|ŚO|PO,LO", "Álex Jiménez|PO|LO", "James Hill|ŚO|PO", "Owen Bevan|ŚO|", "Veljko Milosavljević|ŚO|", "Matai Akinmboni|ŚO|LO",
+        "Lewis Cook|ŚP|DP", "David Brooks|PS|ŚPO,LS", "Alex Scott|ŚP|ŚPO,DP", "Ryan Christie|ŚP|ŚPO,PS", "Tyler Adams|DP|ŚP,PO", "Amine Adli|LS|PS,ŚPO", "Alex Tóth|ŚP|DP",
+        "Evanilson|N|LS,PS", "Ben Gannon-Doak|PS|LS,N", "Marcus Tavernier|LS|ŚPO,LO", "Justin Kluivert|LS|ŚPO,PS", "Eli Junior Kroupi|N|LS,ŚPO", "Enes Ünal|N|", "Rayan|PS|N,LS", "Remy Rees-Dottin|LS|PS"
+    ],
+    "Arsenal F.C.": [
+        "David Raya|BR|", "Kepa Arrizabalaga|BR|", "Tommy Setford|BR|",
+        "William Saliba|ŚO|PO", "Cristhian Mosquera|ŚO|PO", "Ben White|PO|ŚO", "Piero Hincapié|ŚO|LO", "Gabriel Magalhães|ŚO|LO", "Jurriën Timber|PO|ŚO,LO", "Riccardo Calafiori|LO|ŚO", "Myles Lewis-Skelly|LO|ŚP,DP",
+        "Martin Ødegaard|ŚPO|ŚP,PS", "Declan Rice|DP|ŚP,ŚO", "Martín Zubimendi|DP|ŚP", "Mikel Merino|ŚP|DP,ŚPO", "Christian Nørgaard|DP|ŚP,ŚO",
+        "Bukayo Saka|PS|LO", "Viktor Gyökeres|N|LS", "Gabriel Jesus|N|PS,LS", "Kai Havertz|N|ŚPO,ŚP", "Eberechi Eze|ŚPO|LS,ŚP", "Gabriel Martinelli|LS|N,PS", "Leandro Trossard|LS|ŚPO,N", "Noni Madueke|PS|LS"
+    ],
+    "Sunderland A.F.C.": [
+        "Anthony Patterson|BR|", "Blondy Nna Noukeu|BR|", "Simon Moore|BR|", "Robin Roefs|BR|",
+        "Dennis Cirkin|LO|ŚO", "Daniel Ballard|ŚO|", "Lutsharel Geertruida|PO|ŚO,DP", "Luke O'Nien|ŚO|ŚP,PO", "Omar Alderete|ŚO|LO", "Reinildo Mandava|LO|ŚO", "Nordi Mukiele|PO|ŚO", "Trai Hume|PO|ŚO,LO", "Leo Hjelde|ŚO|LO", "Timothée Pembélé|PO|ŚO", "Zak Johnson|ŚO|PO", "Aji Alese|ŚO|LO", "Joe Anderson|ŚO|LO",
+        "Dan Neil|ŚP|DP", "Chemsdine Talbi|ŚPO|PS,LS", "Chris Rigg|ŚP|ŚPO,PS", "Habib Diarra|ŚP|DP,ŚPO", "Noah Sadiki|DP|ŚP,PO", "Enzo Le Fée|ŚP|ŚPO,DP", "Granit Xhaka|DP|ŚP", "Abdoullah Ba|ŚP|ŚPO,PS", "Jay Matete|ŚP|DP", "Harrison Jones|ŚP|ŚPO",
+        "Brian Brobbey|N|", "Eliezer Mayenda|N|LS", "Romaine Mundle|LS|PS", "Wilson Isidor|N|LS,PS", "Simon Adingra|LS|PS", "Bertrand Traoré|PS|N", "Ahmed Abdullahi|N|", "Ian Poveda|PS|ŚPO,LS"
+    ],
+    "Manchester City F.C.": [
+        "James Trafford|BR|", "Marcus Bettinelli|BR|", "Gianluigi Donnarumma|BR|",
+        "Rúben Dias|ŚO|", "John Stones|ŚO|DP,PO", "Nathan Aké|ŚO|LO", "Marc Guéhi|ŚO|", "Rayan Aït-Nouri|LO|LS", "Joško Gvardiol|LO|ŚO", "Abduqodir Xusanov|ŚO|PO", "Rico Lewis|PO|DP,ŚP",
+        "Tijjani Reijnders|ŚP|DP,ŚPO", "Mateo Kovačić|ŚP|DP", "Rodri|DP|ŚP,ŚO", "Bernardo Silva|ŚP|PS,ŚPO", "Matheus Nunes|ŚP|ŚPO,DP", "Nico O’Reilly|ŚP|ŚPO", "Phil Foden|ŚPO|PS,LS", "Rayan Cherki|ŚPO|PS,LS",
+        "Erling Haaland|N|", "Omar Marmoush|N|LS,ŚPO", "Antoine Semenyo|PS|N,LS", "Jérémy Doku|LS|PS", "Nico González|PS|LS,N", "Savinho|PS|LS"
+    ],
+    "Liverpool F.C.": [
+        "Alisson Becker|BR|", "Giorgi Mamardaszwili|BR|", "Freddie Woodman|BR|", "Ármin Pécsi|BR|",
+        "Virgil van Dijk|ŚO|", "Ibrahima Konaté|ŚO|PO", "Joe Gomez|ŚO|PO,LO", "Andy Robertson|LO|LS", "Milos Kerkez|LO|", "Jeremie Frimpong|PO|PS", "Conor Bradley|PO|PS", "Giovanni Leoni|ŚO|", "Rhys Williams|ŚO|", "Calvin Ramsay|PO|ŚO",
+        "Wataru Endō|DP|ŚP,ŚO", "Stefan Bajčetić|DP|ŚP,ŚO", "Alexis Mac Allister|ŚP|DP,ŚPO", "Dominik Szoboszlai|ŚP|ŚPO,PS", "Ryan Gravenberch|ŚP|DP,ŚPO", "Curtis Jones|ŚP|ŚPO,LS", "Florian Wirtz|ŚPO|ŚP,PS", "Trey Nyoni|ŚP|ŚPO",
+        "Mohamed Salah|PS|N", "Alexander Isak|N|LS", "Cody Gakpo|LS|N,ŚPO", "Federico Chiesa|PS|LS,N", "Hugo Ekitike|N|LS,PS", "Rio Ngumoha|LS|PS"
+    ],
+    "Manchester United F.C.": [
+        "Senne Lammens|BR|", "Altay Bayındır|BR|", "Tom Heaton|BR|",
+        "Matthijs de Ligt|ŚO|PO", "Lisandro Martínez|ŚO|LO,DP", "Leny Yoro|ŚO|PO", "Harry Maguire|ŚO|", "Ayden Heaven|ŚO|LO,DP", "Tyler Fredricson|ŚO|", "Diogo Dalot|PO|LO", "Noussair Mazraoui|PO|LO,DP", "Luke Shaw|LO|ŚO", "Tyrell Malacia|LO|", "Patrick Dorgu|LO|LS,ŚP", "Diego León|LO|",
+        "Manuel Ugarte|DP|ŚP", "Casemiro|DP|ŚO", "Kobbie Mainoo|ŚP|DP,ŚPO", "Bruno Fernandes|ŚPO|ŚP,PS", "Mason Mount|ŚPO|ŚP,LS",
+        "Benjamin Šeško|N|", "Joshua Zirkzee|N|ŚPO", "Matheus Cunha|N|ŚPO,LS", "Bryan Mbeumo|PS|N,LS", "Amad Diallo|PS|ŚPO,LS", "Chido Obi|N|"
+    ],
+    "Aston Villa F.C.": [
+        "Emiliano Martínez|BR|", "Robin Olsen|BR|", "Marco Bizot|BR|",
+        "Pau Torres|ŚO|", "Ezri Konsa|ŚO|PO", "Tyrone Mings|ŚO|", "Victor Lindelöf|ŚO|PO", "Matty Cash|PO|PS,ŚP", "Andrés García|PO|PS,LO", "Lucas Digne|LO|LS", "Ian Maatsen|LO|LS,ŚP",
+        "Boubacar Kamara|DP|ŚP,ŚO", "Amadou Onana|DP|ŚP,ŚO", "John McGinn|ŚP|ŚPO,DP", "Youri Tielemans|ŚP|DP,ŚPO", "Ross Barkley|ŚP|ŚPO,DP", "Lamare Bogarde|DP|ŚO,ŚP", "Emiliano Buendía|ŚPO|PS,LS",
+        "Ollie Watkins|N|", "Evann Guessand|N|PS,LS", "Donyell Malen|PS|N,LS", "Jadon Sancho|LS|PS,ŚPO", "Harvey Elliott|PS|ŚPO,ŚP", "Morgan Rogers|LS|ŚPO,N"
+    ],
+    "Wolverhampton Wanderers F.C.": [
+        "José Sá|BR|", "Daniel Bentley|BR|", "Sam Johnstone|BR|",
+        "Toti|ŚO|LO", "Santiago Bueno|ŚO|PO", "Emmanuel Agbadou|ŚO|DP", "Yerson Mosquera|ŚO|PO", "Ladislav Krejčí|ŚO|DP,ŚP", "Matt Doherty|PO|LO,PS", "Pedro Lima|PO|PS", "Rodrigo Gomes|PO|PS,LO", "Ki-Jana Hoever|PO|ŚO", "Jackson Tchatchoua|PO|PS", "Hugo Bueno|LO|LS", "David Møller Wolfe|LO|LS",
+        "André|DP|ŚP", "João Gomes|ŚP|DP", "Marshall Munetsi|ŚP|DP,ŚO", "Jean-Ricner Bellegarde|ŚP|ŚPO,LS",
+        "Jørgen Strand Larsen|N|", "Hwang Hee-chan|N|LS,PS", "Tolu Arokodare|N|", "Mateus Mané|N|LS,PS", "Jhon Arias|PS|LS,ŚPO", "Enso González|LS|PS,ŚPO", "Tawanda Chirewa|ŚPO|PS,N", "Fer López|ŚPO|PS,N"
+    ],
+    "Tottenham Hotspur F.C.": [
+        "Guglielmo Vicario|BR|", "Antonín Kinský|BR|", "Brandon Austin|BR|",
+        "Cristian Romero|ŚO|", "Micky van de Ven|ŚO|LO", "Radu Drăgușin|ŚO|", "Kevin Danso|ŚO|", "Kōta Takai|ŚO|", "Pedro Porro|PO|PS", "Djed Spence|PO|LO", "Destiny Udogie|LO|LS,ŚP", "Ben Davies|LO|ŚO", "Archie Gray|PO|ŚP,DP",
+        "João Palhinha|DP|ŚP", "Yves Bissouma|DP|ŚP", "Rodrigo Bentancur|ŚP|DP", "Pape Matar Sarr|ŚP|DP,ŚPO", "Conor Gallagher|ŚP|ŚPO,DP", "Lucas Bergvall|ŚP|ŚPO", "James Maddison|ŚPO|ŚP,LS", "Xavi Simons|ŚPO|PS,LS",
+        "Dominic Solanke|N|", "Richarlison|N|LS", "Mathys Tel|N|LS,PS", "Dane Scarlett|N|", "Dejan Kulusevski|PS|ŚPO", "Mohammed Kudus|PS|ŚPO,LS", "Manor Solomon|LS|PS,ŚPO", "Wilson Odobert|LS|PS,ŚPO"
+    ],
+    "Crystal Palace F.C.": [
+        "Dean Henderson|BR|", "Walter Benítez|BR|", "Remi Matthews|BR|",
+        "Maxence Lacroix|ŚO|", "Chris Richards|ŚO|PO", "Chadi Riad|ŚO|", "Daniel Muñoz|PO|ŚP,PS", "Nathaniel Clyne|PO|ŚO", "Rio Cardines|PO|ŚP", "Caleb Kporha|PO|PS", "Tyrick Mitchell|LO|LS", "Borna Sosa|LO|LS",
+        "Cheick Doucouré|DP|ŚP", "Adam Wharton|DP|ŚP", "Jefferson Lerma|ŚP|DP,ŚO", "Will Hughes|ŚP|DP", "Kaden Rodney|DP|ŚP,PO", "Justin Devenny|ŚP|DP", "Daichi Kamada|ŚPO|ŚP,LS", "Naouirou Ahamada|ŚP|ŚPO",
+        "Jean-Philippe Mateta|N|", "Eddie Nketiah|N|LS", "Odsonne Édouard|N|LS", "Zach Marsh|N|", "Ismaïla Sarr|PS|LS,N", "Jesurun Rak-Sakyi|PS|LS,ŚPO", "Romain Esse|PS|ŚPO,ŚP", "Matheus França|ŚPO|PS,LS", "Franco Umeh-Chibueze|LS|N", "Asher Agbinone|LS|PS"
+    ],
+    "Newcastle United F.C.": [
+        "Nick Pope|BR|", "Aaron Ramsdale|BR|", "John Ruddy|BR|", "Mark Gillespie|BR|",
+        "Sven Botman|ŚO|", "Fabian Schär|ŚO|", "Malick Thiaw|ŚO|PO", "Dan Burn|ŚO|LO", "Alex Murphy|ŚO|LO", "Kieran Trippier|PO|ŚPO", "Tino Livramento|PO|LO,PS", "Emil Krafth|PO|ŚO", "Lewis Hall|LO|ŚP,LS",
+        "Bruno Guimarães|DP|ŚP", "Sandro Tonali|ŚP|DP", "Joelinton|ŚP|LS,DP", "Jacob Ramsey|ŚP|ŚPO,LS", "Joe Willock|ŚP|ŚPO,LS", "Lewis Miley|ŚP|DP,ŚPO",
+        "Yoane Wissa|N|LS,PS", "William Osula|N|LS,PS", "Nick Woltemade|N|ŚPO", "Anthony Gordon|LS|PS,ŚPO", "Harvey Barnes|LS|PS", "Anthony Elanga|PS|LS", "Jacob Murphy|PS|PO,LS"
+    ],
+    "Burnley F.C.": [
+        "Martin Dúbravka|BR|", "Václav Hladký|BR|", "Max Weiß|BR|",
+        "Jordan Beyer|ŚO|PO,DP", "Joe Worrall|ŚO|PO", "Maxime Estève|ŚO|LO", "Axel Tuanzebe|ŚO|PO,DP", "Bashir Humphreys|ŚO|LO,PO", "Hjalmar Ekdal|ŚO|", "Kyle Walker|PO|ŚO", "Connor Roberts|PO|ŚO,PS", "Quilindschy Hartman|LO|LS", "Lucas Pires|LO|LS",
+        "Josh Cullen|DP|ŚP", "Florentino Luís|DP|ŚP", "Lesley Ugochukwu|DP|ŚP", "James Ward-Prowse|ŚP|DP,ŚPO", "Josh Laurent|ŚP|DP", "Hannibal Mejbri|ŚPO|ŚP,PS", "Mike Trésor Ndayishimiye|ŚPO|LS,PS",
+        "Lyle Foster|N|LS", "Zeki Amdouni|N|ŚPO,LS", "Armando Broja|N|PS", "Ashley Barnes|N|ŚPO", "Zian Flemming|ŚPO|N,LS", "Jacob Bruun Larsen|LS|PS,N", "Jaidon Anthony|LS|PS,ŚPO", "Marcus Edwards|PS|ŚPO,LS", "Loum Tchaouna|PS|LS,N", "Enock Agyei|PS|LS,ŚPO"
+    ],
+    "West Ham United F.C.": [
+        "Alphonse Areola|BR|", "Łukasz Fabiański|BR|", "Wes Foderingham|BR|",
+        "Kurt Zouma|ŚO|", "Jean-Clair Todibo|ŚO|", "Max Kilman|ŚO|", "Nayef Aguerd|ŚO|", "Konstandinos Mawropanos|ŚO|PO", "Vladimír Coufal|PO|wahadło", "Aaron Wan-Bissaka|PO|ŚO", "Emerson Palmieri|LO|LS", "Aaron Cresswell|LO|ŚO",
+        "Edson Álvarez|DP|ŚO,ŚP", "Guido Rodríguez|DP|ŚP", "Tomáš Souček|ŚP|DP,ŚPO", "James Ward-Prowse|ŚP|DP,ŚPO", "Andy Irving|ŚP|DP", "Lucas Paquetá|ŚPO|ŚP,LS", "Luis Guilherme|ŚPO|PS,LS",
+        "Niclas Füllkrug|N|", "Michail Antonio|N|PS,LS", "Danny Ings|N|", "Jarrod Bowen|PS|N,ŚPO", "Mohammed Kudus|PS|ŚPO,LS", "Crysencio Summerville|LS|PS,ŚPO", "Maxwel Cornet|LS|LO,PS"
+    ],
+    "Fulham F.C.": [
+        "Bernd Leno|BR|", "Benjamin Lecomte|BR|",
+        "Joachim Andersen|ŚO|", "Calvin Bassey|ŚO|LO", "Issa Diop|ŚO|", "Jorge Cuenca|ŚO|LO", "Kenny Tete|PO|ŚO,wahadło", "Timothy Castagne|PO|LO,ŚO", "Antonee Robinson|LO|LS", "Ryan Sessegnon|LO|LS",
+        "Sander Berge|DP|ŚP", "Harrison Reed|ŚP|DP", "Saša Lukić|ŚP|DP,ŚPO", "Tom Cairney|ŚP|ŚPO", "Josh King|ŚP|DP", "Emile Smith Rowe|ŚPO|LS,ŚP",
+        "Raúl Jiménez|N|", "Rodrigo Muniz|N|", "Jonah Kusi-Asare|N|", "Alex Iwobi|PS|ŚPO,LS", "Harry Wilson|PS|ŚPO,LS", "Samuel Chukwueze|PS|LS", "Adama Traoré|PS|LS,wahadło", "Kevin|LS|PS,N"
+    ],
+    "Chelsea F.C.": [
+        "Robert Sánchez|BR|", "Filip Jørgensen|BR|", "Gabriel Slonina|BR|",
+        "Levi Colwill|ŚO|LO", "Benoît Badiashile|ŚO|LO", "Tosin Adarabioyo|ŚO|PO", "Wesley Fofana|ŚO|PO", "Jorrel Hato|ŚO|LO", "Trevoh Chalobah|ŚO|DP,PO", "Reece James|PO|ŚO,DP", "Malo Gusto|PO|LO", "Josh Acheampong|PO|ŚO", "Marc Cucurella|LO|ŚO",
+        "Moisés Caicedo|DP|ŚP,PO", "Roméo Lavia|DP|ŚP", "Dário Essugo|DP|ŚP", "Enzo Fernández|ŚP|DP,ŚPO", "Andrey Santos|ŚP|DP",
+        "Liam Delap|N|", "Marc Guiu|N|", "João Pedro|N|LS,ŚPO", "Cole Palmer|ŚPO|PS,N", "Facundo Buonanotte|ŚPO|PS,ŚP", "Pedro Neto|PS|LS,ŚPO", "Estêvão|PS|ŚPO,N", "Alejandro Garnacho|LS|PS,N", "Jamie Gittens|LS|PS", "Mychajło Mudryk|LS|ŚPO,PS", "Tyrique George|PS|LS,ŚPO"
+    ],
+    "Brentford F.C.": [
+        "Caoimhín Kelleher|BR|", "Matthew Cox|BR|", "Hákon Rafn Valdimarsson|BR|", "Ellery Balcombe|BR|", "Julian Eyestone|BR|",
+        "Nathan Collins|ŚO|PO", "Ethan Pinnock|ŚO|", "Kristoffer Ajer|ŚO|PO", "Sepp van den Berg|ŚO|PO", "Benjamin Arthur|ŚO|", "Kim Ji-soo|ŚO|", "Benjamin Fredrick|ŚO|", "Joshua Stephenson|ŚO|", "Rico Henry|LO|LS,wahadło", "Michael Kayode|PO|LO,wahadło", "Aaron Hickey|PO|LO,PP", "Jayden Meghoma|LO|LS",
+        "Jordan Henderson|ŚP|DP", "Vitaly Janelt|DP|ŚP,ŚO", "Mathias Jensen|ŚP|ŚPO,DP", "Frank Onyeka|DP|ŚP", "Josh Dasilva|ŚP|ŚPO,DP", "Jehor Jarmoluk|ŚP|ŚPO", "Yunus Emre Konak|DP|ŚP", "Antoni Milambo|ŚP|ŚPO,DP", "Fábio Carvalho|ŚPO|LS,PS,ŚP", "Myles Peart-Harris|ŚPO|ŚP,LS", "Ryan Trevitt|ŚP|ŚPO", "Romelle Donovan|ŚPO|PS,ŚP", "Luka Bentt|ŚP|DP", "Conor McManus|ŚP|DP", "Riley Owen|ŚP|LO",
+        "Igor Thiago|N|", "Kevin Schade|PS|LS,N", "Dango Ouattara|LS|PS,N", "Reiss Nelson|PS|LS,N", "Keane Lewis-Potter|LS|PS,N", "Mikkel Damsgaard|LS|ŚPO,ŚP", "Gustavo Nunes|LS|PS", "Michael Olakigbe|PS|LS", "Kaye Furo|N|", "Ollie Shield|N|"
+    ],
+    "Everton F.C.": [
+        "Jordan Pickford|BR|", "Mark Travers|BR|", "Harry Tyrer|BR|",
+        "James Tarkowski|ŚO|", "Jarrad Branthwaite|ŚO|LO", "Michael Keane|ŚO|", "Jake O’Brien|ŚO|", "Séamus Coleman|PO|ŚO,wahadło", "Nathan Patterson|PO|wahadło", "Witalij Mykołenko|LO|wahadło", "Adam Aznou|LO|LS",
+        "Idrissa Gueye|DP|ŚP", "Tim Iroegbunam|DP|ŚP", "James Garner|ŚP|DP,PO", "Kiernan Dewsbury-Hall|ŚP|ŚPO,DP", "Carlos Alcaraz|ŚP|ŚPO,N", "Harrison Armstrong|ŚP|DP,ŚPO", "Jack Grealish|ŚPO|LS,ŚP",
+        "Beto|N|", "Youssef Chermiti|N|", "Thierno Barry|N|LS,PS", "Iliman Ndiaye|N|ŚPO,LS,PS", "Dwight McNeil|LS|PS,ŚPO"
+    ],
+    "Brighton & Hove Albion F.C.": [
+        "Bart Verbruggen|BR|", "Jason Steele|BR|", "Carl Rushworth|BR|",
+        "Lewis Dunk|ŚO|", "Adam Webster|ŚO|", "Jan Paul van Hecke|ŚO|", "Igor Julio|ŚO|LO", "Eiran Cashin|ŚO|", "Tariq Lamptey|PO|wahadło,PP", "Joël Veltman|PO|ŚO", "Pervis Estupiñán|LO|wahadło,LS", "Ferdi Kadıoğlu|LO|PO,ŚP,wahadło",
+        "Carlos Baleba|DP|ŚP", "Mats Wieffer|DP|ŚP,ŚO", "James Milner|ŚP|LO,PO,DP", "Jack Hinshelwood|ŚP|PO,LO,DP", "Matt O’Riley|ŚP|ŚPO,DP", "Yasin Ayari|ŚP|ŚPO,DP", "Diego Gómez|ŚP|ŚPO,DP",
+        "Evan Ferguson|N|", "Danny Welbeck|N|LS,PS", "João Pedro|N|ŚPO,LS", "Georginio Rutter|N|ŚPO,PS", "Julio Enciso|ŚPO|N,LS,PS", "Kaoru Mitoma|LS|PS,wahadło", "Simon Adingra|LS|PS,N", "Solly March|PS|LS,wahadło,PO", "Brajan Gruda|PS|ŚPO,LS", "Yankuba Minteh|PS|LS"
+    ],
+    "Leeds United F.C.": [
+        "Lucas Perri|BR|", "Karl Darlow|BR|", "Alex Cairns|BR|",
+        "Joe Rodon|ŚO|", "Pascal Struijk|ŚO|LO,DP", "Jaka Bijol|ŚO|DP", "Sebastiaan Bornauw|ŚO|", "Jayden Bogle|PO|wahadło,PP", "Sam Byram|PO|LO,PP", "Gabriel Gudmundsson|LO|LS,wahadło", "Isaac Schmidt|LO|PO,wahadło",
+        "Ethan Ampadu|DP|ŚO,ŚP", "Ilija Gruew|DP|ŚP", "Anton Stach|DP|ŚP", "Ao Tanaka|ŚP|DP,ŚPO", "Sean Longstaff|ŚP|DP,ŚPO", "Sam Chambers|ŚP|ŚPO",
+        "Dominic Calvert-Lewin|N|", "Joël Piroe|N|ŚPO,LS", "Lukas Nmecha|N|LS,PS", "Brenden Aaronson|ŚPO|PS,LS,ŚP", "Wilfried Gnonto|PS|LS,ŚPO", "Daniel James|PS|LS,ŚPO", "Jack Harrison|LS|PS,ŚPO", "Largie Ramazani|LS|PS,N"
+    ],
+    "Nottingham Forest F.C.": [
+        "Stefan Ortega|BR|", "Matz Sels|BR|", "Angus Gunn|BR|", "John Victor|BR|",
+        "Murillo|ŚO|", "Nikola Milenković|ŚO|PO", "Morato|ŚO|LO", "Willy Boly|ŚO|", "Jair Cunha|ŚO|", "Zach Abbott|ŚO|", "Neco Williams|PO|LO,wahadło", "Nicolò Savona|PO|ŚO", "Eric da Silva Moreira|PO|PP,wahadło", "Ola Aina|LO|PO,wahadło", "Luca Netz|LO|wahadło,LS",
+        "Ryan Yates|DP|ŚP", "Ibrahim Sangaré|DP|ŚP", "Nicolás Domínguez|ŚP|DP", "Elliot Anderson|ŚP|ŚPO,LS", "Morgan Gibbs-White|ŚPO|PS,ŚP", "James McAtee|ŚPO|ŚP,PS",
+        "Taiwo Awoniyi|N|", "Chris Wood|N|", "Igor Jesus|N|", "Lorenzo Lucca|N|", "Callum Hudson-Odoi|LS|PS,ŚPO", "Omari Hutchinson|PS|ŚPO,LS", "Dan Ndoye|PS|LS,wahadło", "Dilane Bakwa|PS|LS,ŚPO"
+    ]
+};
+
+const plPosMap = {"BR":"GK", "ŚO":"CB", "LO":"LB", "PO":"RB", "DP":"CDM", "ŚP":"CM", "ŚPO":"CAM", "LS":"LW", "PS":"RW", "N":"ST", "wahadło":"LWB", "PP":"RM"};
+
 // --- KONFIGURACJA DANYCH ---
 let season = 1, budget = 0, round = 0, cupRound = 0, euroRound = 0;
 let infra = { stadium: 1, medical: 1, training: 1 };
@@ -338,13 +464,13 @@ let lastCupWinner = null;
 let playerTeam = null;
 let matchInProgress = false; 
 let isMatchPaused = false;
-let conferenceActive = false; // FLAG KONFERENCJI PRASOWEJ
+let conferenceActive = false;
 let lastMatchHTML = ""; 
 let currentSponsor = null; let sponsorOffers = [];
 
 const euroMatchDays = [2, 4, 7, 10, 13, 16, 19, 22, 25, 27, 29, 31, 33];
 
-// PEŁNE NAZWY KLUBÓW
+// PEŁNE NAZWY KLUBÓW I KOLORY
 const eklData = [["Legia Warszawa", "#ffffff"], ["Lech Poznań", "#005bbb"], ["Raków Częstochowa", "#cc0000"], ["Pogoń Szczecin", "#800080"], ["Lechia Gdańsk", "#00aa00"], ["Piast Gliwice", "#3b82f6"], ["Cracovia", "#cc5500"], ["Widzew Łódź", "#ef4444"], ["Górnik Zabrze", "#f8fafc"], ["Zagłębie Lubin", "#f59e0b"], ["Korona Kielce", "#f59e0b"], ["Jagiellonia Białystok", "#ef4444"], ["Radomiak Radom", "#10b981"], ["Śląsk Wrocław", "#0ea5e9"], ["Warta Poznań", "#10b981"], ["Stal Mielec", "#3b82f6"], ["ŁKS Łódź", "#ffffff"], ["Ruch Chorzów", "#3b82f6"]];
 const l1Data = [["Wisła Kraków", "#ef4444"], ["Bruk-Bet Termalica", "#f59e0b"], ["Arka Gdynia", "#f59e0b"], ["GKS Katowice", "#f59e0b"], ["Motor Lublin", "#f59e0b"], ["Podbeskidzie Bielsko", "#ef4444"], ["Odra Opole", "#3b82f6"], ["GKS Tychy", "#10b981"], ["Chrobry Głogów", "#f59e0b"], ["Polonia Warszawa", "#000000"], ["Zagłębie Sosnowiec", "#ef4444"], ["Resovia Rzeszów", "#ffffff"], ["Stomil Olsztyn", "#ffffff"], ["Sandecja Nowy Sącz", "#ffffff"], ["Puszcza Niepołomice", "#f59e0b"], ["Miedź Legnica", "#3b82f6"], ["KKS Kalisz", "#3b82f6"], ["Olimpia Elbląg", "#ffffff"]];
 const l2Data = [["Wieczysta Kraków", "#f59e0b"], ["Polonia Bytom", "#3b82f6"], ["GKS Jastrzębie", "#10b981"], ["Radunia Stężyca", "#3b82f6"], ["Olimpia Grudziądz", "#ffffff"], ["Świt Szczecin", "#3b82f6"], ["Znicz Pruszków", "#f59e0b"], ["Hutnik Kraków", "#3b82f6"], ["Siarka Tarnobrzeg", "#f59e0b"], ["Kotwica Kołobrzeg", "#3b82f6"], ["Pogoń Siedlce", "#ffffff"], ["Garbarnia Kraków", "#800000"], ["KSZO Ostrowiec", "#f59e0b"], ["Unia Tarnów", "#3b82f6"], ["Błękitni Stargard", "#3b82f6"], ["Elana Toruń", "#f59e0b"], ["Śląsk Świętochłowice", "#3b82f6"], ["Chełmianka Chełm", "#ffffff"]];
@@ -353,9 +479,17 @@ const l3G2Data = [["Zawisza Bydgoszcz", "#3b82f6"], ["Sokół Kleczew", "#10b981
 const l3G3Data = [["Śląsk II Wrocław", "#10b981"], ["Górnik II Zabrze", "#fff"], ["LKS Goczałkowice", "#f59e0b"], ["Karkonosze Jelenia", "#fff"], ["Carina Gubin", "#ef4444"], ["Stilon Gorzów", "#3b82f6"], ["Warta Gorzów", "#ef4444"], ["Lechia Zielona Góra", "#10b981"], ["Górnik Polkowice", "#10b981"], ["Stal Brzeg", "#f59e0b"], ["Podlesianka Katowice", "#10b981"], ["Odra Bytom Odrz", "#3b82f6"], ["Unia Turza Śląska", "#ef4444"], ["Pniówek Pawłowice", "#10b981"], ["Raków II", "#ef4444"], ["MKS Kluczbork", "#fff"], ["Polonia Łaziska", "#3b82f6"], ["Bielawianka", "#3b82f6"]];
 const l3G4Data = [["Avia Świdnik", "#f59e0b"], ["Star Starachowice", "#10b981"], ["Wiślanie Skawina", "#3b82f6"], ["Podlasie Biała Podl", "#f59e0b"], ["Wisłoka Dębica", "#fff"], ["Czarni Połaniec", "#f59e0b"], ["Podhale Nowy Targ", "#ef4444"], ["Korona II Kielce", "#f59e0b"], ["Lewart Lubartów", "#3b82f6"], ["Pogoń-Sokół", "#3b82f6"], ["KS Wiązownica", "#3b82f6"], ["Świdniczanka", "#10b981"], ["Orlęta Radzyń", "#fff"], ["Karpaty Krosno", "#fff"], ["Izolator Boguchwała", "#fff"], ["Tomasovia", "#3b82f6"], ["Beskid Andrychów", "#fff"], ["Lubań Maniowy", "#ef4444"]];
 
-const baseLM = ["Real Madryt", "Man City", "Bayern", "PSG", "Inter", "Arsenal", "Barcelona", "Liverpool", "Juventus", "Milan", "Bayer L.", "BVB", "Atletico", "Sporting", "Leipzig", "Benfica", "Porto", "Ajax", "PSV", "Napoli", "Aston Villa", "Newcastle", "Monaco", "Lille", "Lyon", "Marseille", "Feyenoord", "Club Brugge", "Celtic", "Rangers", "Galatasaray", "Fenerbahce", "Lazio", "Atalanta", "Sevilla", "Girona", "Bologna", "Stuttgart", "Real Sociedad", "RB Salzburg"];
-const baseLE = ["Man Utd", "Athletic", "Olympiakos", "Fiorentina", "Brest", "AZ Alkmaar", "Twente", "Besiktas", "Trabzonspor", "PAOK", "AEK", "Dinamo Z.", "Slavia P.", "Sparta P.", "Sturm G.", "Young Boys", "Basel", "Copenhagen", "Midtjylland", "Maccabi", "Qarabag", "Bodo/Glimt", "Molde", "LASK", "Rapid W.", "Genk", "Anderlecht", "Standard", "Partizan", "Crvena", "Ludogorets", "Sheriff", "Cluj", "FCSB", "Leganes", "Genoa", "Torino", "Real Betis", "Villarreal", "Wolfsburg", "Nice", "Mainz 05", "Antalyaspor", "Rio Ave", "Gaziantep FK"];
-const baseLK = ["Heidenheim", "Lens", "Osasuna", "Nantes", "Mainz", "Augsburg", "Empoli", "Lecce", "Sassuolo", "Getafe", "Celta", "Mallorca", "Rayo", "Alaves", "Boavista", "Braga", "Vitoria", "Maritimo", "Utrecht", "Vitesse", "Heerenveen", "Groningen", "Antwerp", "Gent", "Mechelen", "Charleroi", "Sion", "Zurich", "Grasshoppers", "Luzern", "St. Gallen", "Hearts", "Hibs", "Aberdeen", "Dundee", "Linfield", "Shamrock", "TNS", "Bala Town"];
+const plColors = [
+    ["Arsenal F.C.", "#ef0107"], ["Manchester City F.C.", "#6cabdd"], ["Liverpool F.C.", "#c8102E"], ["Manchester United F.C.", "#da291c"], ["Chelsea F.C.", "#034694"], ["Tottenham Hotspur F.C.", "#132257"], ["Newcastle United F.C.", "#241F20"], ["Aston Villa F.C.", "#95BFE5"], ["Brighton & Hove Albion F.C.", "#0057B8"], ["West Ham United F.C.", "#7A263A"], ["Crystal Palace F.C.", "#1B458F"], ["Bournemouth", "#B50E12"], ["Fulham F.C.", "#ffffff"], ["Wolverhampton Wanderers F.C.", "#FDB913"], ["Everton F.C.", "#003399"], ["Brentford F.C.", "#e30613"], ["Sunderland A.F.C.", "#EB172B"], ["Burnley F.C.", "#6C1D45"], ["Leeds United F.C.", "#FFCD00"], ["Nottingham Forest F.C.", "#e53233"]
+];
+
+const chData = [["Birmingham City", "#0000ff"], ["Blackburn Rovers", "#0000ff"], ["Bristol City", "#e30613"], ["Charlton Athletic", "#d00027"], ["Coventry City", "#00bfff"], ["Derby County", "#ffffff"], ["Hull City", "#f5a12d"], ["Ipswich Town", "#0000ff"], ["Leicester City", "#003090"], ["Middlesbrough", "#e2001a"], ["Millwall", "#001a49"], ["Norwich City", "#fff200"], ["Oxford United", "#fcd116"], ["Portsmouth", "#001489"], ["Preston North End", "#ffffff"], ["Queens Park Rangers", "#0033a0"], ["Sheffield United", "#e2001a"], ["Sheffield Wednesday", "#003090"], ["Southampton", "#d71920"], ["Stoke City", "#e03a3e"], ["Swansea City", "#ffffff"], ["Watford", "#fbee23"], ["West Bromwich Albion", "#001c58"], ["Wrexham AFC", "#e4002b"]];
+const esp1Data = [["Deportivo Alavés", "#0050ba"], ["Athletic Club (Bilbao)", "#ee2523"], ["Atlético Madryt", "#cb3524"], ["FC Barcelona", "#004d98"], ["RC Celta Vigo", "#aaddf9"], ["Elche CF", "#ffffff"], ["RCD Espanyol", "#0000ff"], ["Getafe CF", "#005999"], ["Girona FC", "#ce1126"], ["Levante UD", "#005aa5"], ["RCD Mallorca", "#e20613"], ["CA Osasuna", "#d11241"], ["Real Oviedo", "#005aaa"], ["Rayo Vallecano", "#ffffff"], ["Real Betis", "#0bb363"], ["Real Madryt", "#ffffff"], ["Real Sociedad", "#0067b1"], ["Sevilla FC", "#ffffff"], ["Valencia CF", "#ffffff"], ["Villarreal CF", "#fce800"]];
+const esp2Data = [["AD Ceuta FC", "#ffffff"], ["Albacete Balompié", "#8a1538"], ["Burgos CF", "#000000"], ["Cádiz CF", "#ffee00"], ["CD Castellón", "#000000"], ["CD Leganés", "#005ca5"], ["CD Mirandés", "#e30613"], ["Córdoba CF", "#006633"], ["Cultural y Deportiva Leonesa", "#ffffff"], ["Deportivo de La Coruña", "#0053a0"], ["FC Andorra", "#004e9c"], ["Granada CF", "#cc0000"], ["Málaga CF", "#00a0e3"], ["Real Racing Club", "#005e20"], ["Real Sociedad B", "#0067b1"], ["Real Valladolid CF", "#472765"], ["Real Saragossa", "#005ca5"], ["SD Eibar", "#8f172b"], ["SD Huesca", "#00285d"], ["Sporting de Gijón", "#ed1c24"], ["UD Almería", "#e30613"], ["UD Las Palmas", "#ffd100"]];
+
+const baseLM = ["Bayern", "PSG", "Inter", "Juventus", "Milan", "Bayer L.", "BVB", "Sporting", "Leipzig", "Benfica", "Porto", "Ajax", "PSV", "Napoli", "Monaco", "Lille", "Lyon", "Marseille", "Feyenoord", "Club Brugge", "Celtic", "Rangers", "Galatasaray", "Fenerbahce", "Lazio", "Atalanta", "Bologna", "Stuttgart", "RB Salzburg"];
+const baseLE = ["Fiorentina", "Brest", "AZ Alkmaar", "Twente", "Besiktas", "Trabzonspor", "PAOK", "AEK", "Dinamo Z.", "Slavia P.", "Sparta P.", "Sturm G.", "Young Boys", "Basel", "Copenhagen", "Midtjylland", "Maccabi", "Qarabag", "Bodo/Glimt", "Molde", "LASK", "Rapid W.", "Genk", "Anderlecht", "Standard", "Partizan", "Crvena", "Ludogorets", "Sheriff", "Cluj", "FCSB", "Genoa", "Torino", "Wolfsburg", "Nice", "Mainz 05", "Antalyaspor", "Rio Ave", "Gaziantep FK"];
+const baseLK = ["Heidenheim", "Lens", "Nantes", "Mainz", "Augsburg", "Empoli", "Lecce", "Sassuolo", "Boavista", "Braga", "Vitoria", "Maritimo", "Utrecht", "Vitesse", "Heerenveen", "Groningen", "Antwerp", "Gent", "Mechelen", "Charleroi", "Sion", "Zurich", "Grasshoppers", "Luzern", "St. Gallen", "Hearts", "Hibs", "Aberdeen", "Dundee", "Linfield", "Shamrock", "TNS", "Bala Town"];
 
 window.getRawOVR = function(team) {
     let lineup = team.lineup.filter(p => p); if(lineup.length === 0) lineup = team.players; if(lineup.length === 0) return 0;
@@ -374,13 +508,18 @@ window.getAvatarHTML = function(name, color = "var(--secondary)") {
     return `<div style="width:100%; height:100%; border-radius:50%; background: linear-gradient(135deg, ${color} 0%, rgba(30,41,59,1) 100%); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:14px; border: 2px solid rgba(255,255,255,0.2); box-sizing:border-box;">${init}</div>`;
 };
 
+const logoInitials = {
+    "Deportivo Alavés": "ALA", "Athletic Club (Bilbao)": "ATH", "Atlético Madryt": "ATM", "FC Barcelona": "FCB", "RC Celta Vigo": "CEL", "Elche CF": "ELC", "RCD Espanyol": "ESP", "Getafe CF": "GET", "Girona FC": "GIR", "Levante UD": "LEV", "RCD Mallorca": "MAL", "CA Osasuna": "OSA", "Real Oviedo": "OVI", "Rayo Vallecano": "RAY", "Real Betis": "BET", "Real Madryt": "RMA", "Real Sociedad": "RSO", "Sevilla FC": "SEV", "Valencia CF": "VAL", "Villarreal CF": "VIL",
+    "Arsenal F.C.": "ARS", "Manchester City F.C.": "MCI", "Liverpool F.C.": "LIV", "Manchester United F.C.": "MUN", "Chelsea F.C.": "CHE", "Tottenham Hotspur F.C.": "TOT", "Newcastle United F.C.": "NEW", "Aston Villa F.C.": "AVL", "Brighton & Hove Albion F.C.": "BHA", "West Ham United F.C.": "WHU", "Crystal Palace F.C.": "CRY", "Bournemouth": "BOU", "Fulham F.C.": "FUL", "Wolverhampton Wanderers F.C.": "WOL", "Everton F.C.": "EVE", "Brentford F.C.": "BRE", "Sunderland A.F.C.": "SUN", "Burnley F.C.": "BUR", "Leeds United F.C.": "LEE", "Nottingham Forest F.C.": "NFO",
+    "Birmingham City": "BIR", "Blackburn Rovers": "BLA", "Bristol City": "BRI", "Charlton Athletic": "CHA", "Coventry City": "COV", "Derby County": "DER", "Hull City": "HUL", "Ipswich Town": "IPS", "Leicester City": "LEI", "Middlesbrough": "MID", "Millwall": "MIL", "Norwich City": "NOR", "Oxford United": "OXF", "Portsmouth": "POR", "Preston North End": "PNE", "Queens Park Rangers": "QPR", "Sheffield United": "SHU", "Sheffield Wednesday": "SHW", "Southampton": "SOU", "Stoke City": "STK", "Swansea City": "SWA", "Watford": "WAT", "West Bromwich Albion": "WBA", "Wrexham AFC": "WRX"
+};
+
 function drawLogo(name, color) {
-    let txtCol = (color === "#ffffff" || color === "#fff" || color === "#f59e0b") ? "#0f172a" : "#ffffff";
-    let init = name.slice(0,3).toUpperCase();
+    let txtCol = (color === "#ffffff" || color === "#fff" || color === "#f59e0b" || color === "#ffee00" || color === "#fbee23" || color === "#ffd100" || color === "#fff200" || color === "#fcd116" || color === "#fce800") ? "#0f172a" : "#ffffff";
+    let init = logoInitials[name] || name.slice(0,3).toUpperCase();
     return `<div style="width: 40px; height: 40px; background: linear-gradient(135deg, ${color} 0%, rgba(0,0,0,0.3) 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: ${txtCol}; font-family: 'Montserrat'; font-size: 14px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-shadow: 0 1px 2px rgba(0,0,0,0.3);">${init}</div>`;
 }
 
-// Funkcja dodająca szczegółowe statystyki do zawodnika i losująca poboczne pozycje, hierarchię, języki i przywództwo
 function populateStats(p) {
     p = assignPositions(p);
     p.instruction = p.instruction || "Domyślne";
@@ -469,6 +608,20 @@ const realSquads = {
     ]
 };
 
+// Integrowanie PL do realSquads
+for (let club in plRaw) {
+    realSquads[club] = plRaw[club].map(p => {
+        let [name, main, sec] = p.split("|");
+        let secPos = sec ? sec.split(",").map(s => plPosMap[s.trim()] || s.trim()) : [];
+        let exactPos = plPosMap[main.trim()] || main.trim();
+        let group = ["GK"].includes(exactPos) ? "GK" : ["CB","LB","RB","LWB","RWB"].includes(exactPos) ? "DEF" : ["CDM","CM","CAM","LM","RM"].includes(exactPos) ? "MID" : "ATT";
+        let isTop6 = ["Arsenal F.C.", "Manchester City F.C.", "Liverpool F.C.", "Manchester United F.C.", "Chelsea F.C.", "Tottenham Hotspur F.C."].includes(club);
+        let baseSkill = isTop6 ? 81 + Math.floor(Math.random()*8) : 76 + Math.floor(Math.random()*8);
+        let age = 19 + Math.floor(Math.random()*13);
+        return { name: name, pos: group, exactPos: exactPos, secPos: secPos, skill: baseSkill, potential: baseSkill + Math.floor(Math.random()*6), age: age };
+    });
+}
+
 const specificRealPlayers = [
     {name: "Oskar Pietuszewski", pos: "ATT", skill: 75, potential: 89, age: 17, club: "Porto"},
     {name: "Kamil Grabara", pos: "GK", skill: 81, potential: 85, age: 27, club: "Wolfsburg"},
@@ -480,7 +633,7 @@ const specificRealPlayers = [
     {name: "Kacper Kozłowski", pos: "MID", skill: 74, potential: 82, age: 22, club: "Gaziantep FK"},
     {name: "Bright Ede", pos: "DEF", skill: 65, potential: 80, age: 20, club: "Zagłębie Lubin"},
     {name: "Radosław Majecki", pos: "GK", skill: 78, potential: 84, age: 26, club: "Monaco"},
-    {name: "Jakub Kiwior", pos: "DEF", skill: 82, potential: 86, age: 26, club: "Arsenal"},
+    {name: "Jakub Kiwior", pos: "DEF", skill: 82, potential: 86, age: 26, club: "Arsenal F.C."},
     {name: "Mateusz Kowalczyk", pos: "MID", skill: 72, potential: 80, age: 22, club: "GKS Katowice"},
     {name: "Jakub Kamiński", pos: "MID", skill: 76, potential: 83, age: 23, club: "Wolfsburg"},
     {name: "Dominik Marczuk", pos: "MID", skill: 75, potential: 82, age: 22, club: "Real Salt Lake"},
@@ -495,12 +648,12 @@ const specificRealPlayers = [
     {name: "Łukasz Skorupski", pos: "GK", skill: 78, potential: 78, age: 34, club: "Bologna"},
     {name: "Jan Bednarek", pos: "DEF", skill: 76, potential: 78, age: 29, club: "Southampton"},
     {name: "Paweł Dawidowicz", pos: "DEF", skill: 74, potential: 75, age: 30, club: "Hellas Verona"},
-    {name: "Matty Cash", pos: "DEF", skill: 78, potential: 80, age: 28, club: "Aston Villa"},
+    {name: "Matty Cash", pos: "DEF", skill: 78, potential: 80, age: 28, club: "Aston Villa F.C."},
     {name: "Nicola Zalewski", pos: "MID", skill: 76, potential: 84, age: 23, club: "Roma"},
     {name: "Przemysław Frankowski", pos: "MID", skill: 77, potential: 77, age: 30, club: "Lens"},
     {name: "Sebastian Szymański", pos: "MID", skill: 80, potential: 84, age: 26, club: "Fenerbahce"},
     {name: "Piotr Zieliński", pos: "MID", skill: 83, potential: 83, age: 31, club: "Inter"},
-    {name: "Jakub Moder", pos: "MID", skill: 75, potential: 81, age: 26, club: "Brighton"},
+    {name: "Jakub Moder", pos: "MID", skill: 75, potential: 81, age: 26, club: "Brighton & Hove Albion F.C."},
     {name: "Bartosz Slisz", pos: "MID", skill: 73, potential: 76, age: 26, club: "Atlanta United"},
     {name: "Jakub Piotrowski", pos: "MID", skill: 74, potential: 76, age: 27, club: "Ludogorets"},
     {name: "Karol Świderski", pos: "ATT", skill: 75, potential: 76, age: 28, club: "Hellas Verona"},
@@ -541,6 +694,7 @@ function genEuroTeam(name, lvl) {
     applySquad(t, lvl, true); return t;
 }
 
+let plTeams = [], chTeams = [], esp1Teams = [], esp2Teams = [];
 let eklTeams = eklData.map((d, i) => ({ name: d[0], color: d[1], players: [], lineup: [], points: 0, euroPoints: 0, div: 'EKL', id: i }));
 let l1Teams = l1Data.map((d, i) => ({ name: d[0], color: d[1], players: [], lineup: [], points: 0, euroPoints: 0, div: '1L', id: i + 100 }));
 let l2Teams = l2Data.map((d, i) => ({ name: d[0], color: d[1], players: [], lineup: [], points: 0, euroPoints: 0, div: '2L', id: i + 200 }));
@@ -552,9 +706,14 @@ let worldTeams = [];
 
 let euroData = { qual: [], lm: { teams: [], fixtures: [], ko: [] }, le: { teams: [], fixtures: [], ko: [] }, lk: { teams: [], fixtures: [], ko: [] } };
 let cupFixtures = [];
-let schedEkl = [], sched1L = [], sched2L = [], sched3L1 = [], sched3L2 = [], sched3L3 = [], sched3L4 = [];
+let schedPL = [], schedCH = [], schedESP1 = [], schedESP2 = [], schedEkl = [], sched1L = [], sched2L = [], sched3L1 = [], sched3L2 = [], sched3L3 = [], sched3L4 = [];
 
 function initWorld() {
+    plTeams = plColors.map((d, i) => { let t = { name: d[0], color: d[1], players: [], lineup: [], points: 0, euroPoints: 0, div: 'PL', id: i + 1000 }; applySquad(t, -4, true); return t; });
+    chTeams = chData.map((d, i) => { let t = { name: d[0], color: d[1], players: [], lineup: [], points: 0, euroPoints: 0, div: 'CH', id: i + 2000 }; applySquad(t, -2, true); return t; });
+    esp1Teams = esp1Data.map((d, i) => { let t = { name: d[0], color: d[1], players: [], lineup: [], points: 0, euroPoints: 0, div: 'ESP1', id: i + 3000 }; applySquad(t, -4, true); return t; });
+    esp2Teams = esp2Data.map((d, i) => { let t = { name: d[0], color: d[1], players: [], lineup: [], points: 0, euroPoints: 0, div: 'ESP2', id: i + 4000 }; applySquad(t, -2, true); return t; });
+
     [eklTeams, l1Teams, l2Teams, l3G1Teams, l3G2Teams, l3G3Teams, l3G4Teams].forEach((arr, i) => { let lvl = i===0?0 : i===1?1 : i===2?2 : 3; arr.forEach(t => applySquad(t, lvl, false)); });
     
     let allPolishTeams = [...eklTeams, ...l1Teams, ...l2Teams, ...l3G1Teams, ...l3G2Teams, ...l3G3Teams, ...l3G4Teams];
@@ -567,10 +726,14 @@ function initWorld() {
 
     let extraClubs = specificRealPlayers.map(p => p.club);
     let allBaseClubs = [...new Set([...baseLM, ...baseLE, ...baseLK, ...extraClubs])];
-    allBaseClubs.forEach(cName => { let lvl = baseLM.includes(cName) ? -4 : baseLE.includes(cName) ? -2 : -1; worldTeams.push(genEuroTeam(cName, lvl)); });
+    allBaseClubs.forEach(cName => { 
+        if(!plTeams.find(t => t.name === cName) && !chTeams.find(t => t.name === cName) && !esp1Teams.find(t => t.name === cName) && !esp2Teams.find(t => t.name === cName)) {
+            let lvl = baseLM.includes(cName) ? -4 : baseLE.includes(cName) ? -2 : -1; worldTeams.push(genEuroTeam(cName, lvl)); 
+        }
+    });
 
     specificRealPlayers.forEach(p => {
-        let club = allPolishTeams.find(t => t.name === p.club) || worldTeams.find(t => t.name === p.club);
+        let club = allPolishTeams.find(t => t.name === p.club) || plTeams.find(t => t.name === p.club) || chTeams.find(t => t.name === p.club) || esp1Teams.find(t => t.name === p.club) || esp2Teams.find(t => t.name === p.club) || worldTeams.find(t => t.name === p.club);
         if(!club) { club = genEuroTeam(p.club, -1); worldTeams.push(club); }
         if (!club.players.find(x => x.name === p.name)) club.players.push(populateStats({...p, id: Math.random().toString(), price: window.calculatePrice(p.skill, p.age, p.pos), status: "Rezerwa", fatigue: 100, injury: 0, suspended: 0, goals: 0, matches: 0, instruction: "Domyślne" }));
     });
@@ -579,6 +742,10 @@ function initWorld() {
 function initStartScreen() {
     initWorld(); let html = '';
     const leagues = [ 
+        {name: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League", data: plTeams},
+        {name: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Championship", data: chTeams},
+        {name: "🇪🇸 La Liga", data: esp1Teams},
+        {name: "🇪🇸 La Liga 2", data: esp2Teams},
         {name: "Ekstraklasa", data: eklTeams}, 
         {name: "1. Liga", data: l1Teams}, 
         {name: "2. Liga", data: l2Teams},
@@ -589,7 +756,7 @@ function initStartScreen() {
     ];
     leagues.forEach((l, lIdx) => {
         html += `<h2 class="divider" style="background:transparent; border-left: none; text-align:left; font-size:18px; margin-bottom:10px;">${l.name}</h2><div class="league-grid">`;
-        l.data.forEach(t => { html += `<button class="club-btn" onclick="window.startGame(${lIdx}, ${t.id})">${drawLogo(t.name, t.color)}<span style="font-size:12px;">${t.name}</span></button>`; });
+        l.data.forEach(t => { html += `<button class="club-btn" onclick="window.startGame(${lIdx}, ${t.id})">${drawLogo(t.name, t.color)}<span style="font-size:12px; text-align:center;">${t.name}</span></button>`; });
         html += `</div>`;
     });
     document.getElementById('clubs-container').innerHTML = html;
@@ -599,12 +766,23 @@ window.startGame = function(leagueIdx, teamId) {
     document.getElementById('start-screen').style.display = 'none'; document.querySelector('header').style.display = 'flex';
     document.getElementById('top-bar').style.display = 'flex'; document.getElementById('mainNav').style.display = 'flex'; document.getElementById('content').style.display = 'block';
     
-    let allLg = [eklTeams, l1Teams, l2Teams, l3G1Teams, l3G2Teams, l3G3Teams, l3G4Teams];
+    let allLg = [plTeams, chTeams, esp1Teams, esp2Teams, eklTeams, l1Teams, l2Teams, l3G1Teams, l3G2Teams, l3G3Teams, l3G4Teams];
     playerTeam = allLg[leagueIdx].find(t => t.id === teamId);
-    budget = playerTeam.div === 'EKL' ? 25000000 : playerTeam.div === '1L' ? 10000000 : playerTeam.div === '2L' ? 3000000 : 1000000;
+    
+    budget = playerTeam.div === 'PL' ? 300000000 : playerTeam.div === 'ESP1' ? 250000000 : playerTeam.div === 'CH' ? 50000000 : playerTeam.div === 'ESP2' ? 30000000 : playerTeam.div === 'EKL' ? 25000000 : playerTeam.div === '1L' ? 10000000 : playerTeam.div === '2L' ? 3000000 : 1000000;
     playerTeam.chemistry = 100; playerTeam.morale = 100;
+    
+    schedPL = genSched(plTeams); schedCH = genSched(chTeams); schedESP1 = genSched(esp1Teams); schedESP2 = genSched(esp2Teams);
     schedEkl = genSched(eklTeams); sched1L = genSched(l1Teams); sched2L = genSched(l2Teams); sched3L1 = genSched(l3G1Teams); sched3L2 = genSched(l3G2Teams); sched3L3 = genSched(l3G3Teams); sched3L4 = genSched(l3G4Teams);
-    initCup(); initEuro(eklTeams[0], eklTeams[1], eklTeams[2], eklTeams[3], eklTeams[4]);
+    initCup(); 
+    
+    let champSrc;
+    if(playerTeam.div === 'PL' || playerTeam.div === 'CH') champSrc = plTeams;
+    else if (playerTeam.div === 'ESP1' || playerTeam.div === 'ESP2') champSrc = esp1Teams;
+    else champSrc = eklTeams;
+    
+    initEuro(champSrc[0], champSrc[1], champSrc[2], champSrc[3], champSrc[4] || champSrc[0]);
+    
     if (playerTeam.mainTeam) document.getElementById('nav-reserves').style.display = 'none';
     window.show('team', document.getElementById('nav-team'));
 };
@@ -612,7 +790,12 @@ window.startGame = function(leagueIdx, teamId) {
 function initEuro(plChamp, plRun, pl3, pl4, plCup) {
     euroRound = 0; let allPolishTeams = [...eklTeams, ...l1Teams, ...l2Teams, ...l3G1Teams, ...l3G2Teams, ...l3G3Teams, ...l3G4Teams];
     allPolishTeams.forEach(t => t.euroPoints = 0);
+    plTeams.forEach(t => t.euroPoints = 0); chTeams.forEach(t => t.euroPoints = 0);
+    esp1Teams.forEach(t => t.euroPoints = 0); esp2Teams.forEach(t => t.euroPoints = 0);
+    
     let qLMOpp = worldTeams.filter(t => baseLM.includes(t.name)).sort(() => 0.5 - Math.random())[0]; let qLKOpp = worldTeams.filter(t => baseLE.includes(t.name)).sort(() => 0.5 - Math.random())[0];
+    if(!qLMOpp) qLMOpp = genEuroTeam("Rywal LM", -4); if(!qLKOpp) qLKOpp = genEuroTeam("Rywal LK", -2);
+    
     euroData.qual = [ { type: 'lm', pl: plRun, opp: qLMOpp }, { type: 'lk', pl: plCup, opp: qLKOpp } ];
     euroData.lm = { teams: [plChamp], fixtures: [], ko: [] }; euroData.le = { teams: [pl3], fixtures: [], ko: [] }; euroData.lk = { teams: [pl4], fixtures: [], ko: [] };
 }
@@ -681,9 +864,16 @@ window.setDefLine = function(line) { defensiveLine = line; if (document.getEleme
 window.makeCaptain = function(id) { playerTeam.captain = id; window.show('team'); };
 
 function generateSponsorOffer() {
-    const sponsors = ["Orlen", "InPost", "STS", "PZU", "Biedronka", "Polsat", "Allegro", "CD Projekt", "Nike"];
+    const sponsors = ["Orlen", "InPost", "STS", "PZU", "Biedronka", "Polsat", "Allegro", "CD Projekt", "Nike", "Emirates", "Standard Chartered", "Santander", "CaixaBank", "Telefónica"];
     let name = sponsors[Math.floor(Math.random() * sponsors.length)]; let amount = 0;
-    if (playerTeam.div === 'EKL') amount = 2000000 + Math.floor(Math.random() * 4000000); else if (playerTeam.div === '1L') amount = 500000 + Math.floor(Math.random() * 1500000); else amount = 100000 + Math.floor(Math.random() * 300000);
+    if (playerTeam.div === 'PL') amount = 10000000 + Math.floor(Math.random() * 20000000); 
+    else if (playerTeam.div === 'ESP1') amount = 8000000 + Math.floor(Math.random() * 15000000); 
+    else if (playerTeam.div === 'CH') amount = 3000000 + Math.floor(Math.random() * 5000000); 
+    else if (playerTeam.div === 'ESP2') amount = 2000000 + Math.floor(Math.random() * 4000000); 
+    else if (playerTeam.div === 'EKL') amount = 2000000 + Math.floor(Math.random() * 4000000); 
+    else if (playerTeam.div === '1L') amount = 500000 + Math.floor(Math.random() * 1500000); 
+    else amount = 100000 + Math.floor(Math.random() * 300000);
+    
     sponsorOffers.push({ id: Math.random(), name: name, amount: amount, msg: `Szanowny Menedżerze,<br><br>Jesteśmy pod wrażeniem klubu ${playerTeam.name}. Proponujemy kontrakt: <b>${amount.toLocaleString()} zł</b> na koniec sezonu.<br><br>Zarząd ${name}` });
     document.getElementById("sponsor-badge").style.display = "inline-block";
 }
@@ -796,7 +986,6 @@ function simMatch(h, a, isCup = false) {
     let hWinM = 5, hLossM = 5, hDrawM = 1;
     let aWinM = 5, aLossM = 5, aDrawM = 1;
 
-    // --- ZASTOSOWANIE EFEKTÓW KONFERENCJI PRASOWEJ ---
     if (h === playerTeam && conferenceActive) { hWinM = 15; hLossM = 15; hDrawM = -2; }
     if (a === playerTeam && conferenceActive) { aWinM = 15; aLossM = 15; aDrawM = -2; }
 
@@ -853,7 +1042,6 @@ window.renderLiveTactics = function() {
     html += `</div>`; document.getElementById("live-tactics-content").innerHTML = html;
 };
 
-// PRZERWA I PAUZA
 window.pauseMatch = function(isHalfTime = false) {
     isMatchPaused = true; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.zIndex = 2500;
     document.getElementById('tactics-modal-title').innerText = isHalfTime ? "PRZERWA - ZARZĄDZANIE W SZATNI" : "ZARZĄDZANIE W TRAKCIE MECZU";
@@ -1001,13 +1189,24 @@ window.show = function(view, btn) {
     }
     if (view === "tactics") { window.renderLiveTactics(); content.innerHTML = `<h2>Taktyka i Ustawienie</h2><div id="live-tactics-content">${document.getElementById("live-tactics-content").innerHTML}</div>`; }
     if (view === "league") {
-        let leagues = [eklTeams, l1Teams, l2Teams, l3G1Teams, l3G2Teams, l3G3Teams, l3G4Teams]; let names = ["Ekstraklasa", "1. Liga", "2. Liga", "3. Liga - Grupa I", "3. Liga - Grupa II", "3. Liga - Grupa III", "3. Liga - Grupa IV"]; let html = "";
+        let leagues = [plTeams, chTeams, esp1Teams, esp2Teams, eklTeams, l1Teams, l2Teams, l3G1Teams, l3G2Teams, l3G3Teams, l3G4Teams]; 
+        let names = ["🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League", "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Championship", "🇪🇸 La Liga", "🇪🇸 La Liga 2", "Ekstraklasa", "1. Liga", "2. Liga", "3. Liga - Grupa I", "3. Liga - Grupa II", "3. Liga - Grupa III", "3. Liga - Grupa IV"]; 
+        let html = "";
         leagues.forEach((l, idx) => {
             let sorted = [...l].sort((a,b) => b.points - a.points || a.id - b.id);
             html += `<h3 class="divider">${names[idx]}</h3><div class="card" style="padding:10px;">`;
             sorted.forEach((t, i) => {
-                let cl = ''; if(idx === 0) cl = (i >= 15) ? 'relegation-zone' : (i < 2) ? 'promotion-zone' : (i === 2 || i === 3) ? 'highlight' : ''; else if (idx === 1) cl = (i >= 15) ? 'relegation-zone' : (i < 3) ? 'promotion-zone' : ''; else if (idx === 2) cl = (i >= 14) ? 'relegation-zone' : (i < 3) ? 'promotion-zone' : ''; else cl = (i === 0) ? 'promotion-zone' : ''; 
-                let euTag = (idx === 0 && i === 0) ? "⭐ LM" : (idx === 0 && i === 1) ? "🔄 el.LM" : (idx === 0 && i === 2) ? "🟠 LE" : (idx === 0 && i === 3) ? "🟢 LK" : "";
+                let cl = ''; 
+                if(idx === 0) cl = (i >= 17) ? 'relegation-zone' : (i < 4) ? 'promotion-zone' : (i === 4 || i === 5) ? 'highlight' : '';
+                else if (idx === 1) cl = (i < 3) ? 'promotion-zone' : '';
+                else if (idx === 2) cl = (i >= 17) ? 'relegation-zone' : (i < 4) ? 'promotion-zone' : (i === 4 || i === 5) ? 'highlight' : '';
+                else if (idx === 3) cl = (i < 3) ? 'promotion-zone' : '';
+                else if(idx === 4) cl = (i >= 15) ? 'relegation-zone' : (i < 2) ? 'promotion-zone' : (i === 2 || i === 3) ? 'highlight' : ''; 
+                else if (idx === 5) cl = (i >= 15) ? 'relegation-zone' : (i < 3) ? 'promotion-zone' : ''; 
+                else if (idx === 6) cl = (i >= 14) ? 'relegation-zone' : (i < 3) ? 'promotion-zone' : ''; 
+                else cl = (i === 0) ? 'promotion-zone' : ''; 
+                
+                let euTag = ((idx === 0 && i < 4) || (idx === 2 && i < 4) || (idx === 4 && i === 0)) ? "⭐ LM" : (idx === 4 && i === 1) ? "🔄 el.LM" : ((idx === 0 && i === 4) || (idx === 2 && i === 4) || (idx === 4 && i === 2)) ? "🟠 LE" : ((idx === 0 && i === 5) || (idx === 2 && i === 5) || (idx === 4 && i === 3)) ? "🟢 LK" : "";
                 if(t === playerTeam) cl += ' highlight';
                 html += `<div class="table-row ${cl}"><span style="display:flex; align-items:center; gap:10px;"><span style="width:20px; text-align:right; color:var(--text-muted)">${i+1}.</span> <div style="transform:scale(0.8); margin:-10px 0;">${drawLogo(t.name, t.color)}</div> <b>${t.name}</b> <span class="ovr-badge">${window.getRawOVR(t)} OVR</span> <b style="color:var(--warning);font-size:10px;">${euTag}</b></span> <b style="font-size:16px;">${t.points} <span style="font-size:10px; color:var(--text-muted); font-weight:normal;">PKT</span></b></div>`;
             }); html += `</div>`;
@@ -1015,9 +1214,9 @@ window.show = function(view, btn) {
     }
     if (view === "cup") {
         if(cupFixtures.length === 0) {
-            if(lastCupWinner) content.innerHTML = `<h2>Puchar Polski</h2><div class="card" style="text-align:center; padding:40px; border: 2px solid var(--warning); background:rgba(245, 158, 11, 0.1);">🏆 ZWYCIĘZCA: <h3 style="color:var(--warning); margin-top:10px;">${lastCupWinner.name}</h3></div>`; else content.innerHTML = `<h2>Puchar Polski</h2><div class="card" style="text-align:center; padding:40px; color:var(--text-muted)">Rozgrywki rozpoczną się wkrótce...</div>`;
+            if(lastCupWinner) content.innerHTML = `<h2>Puchar Krajowy</h2><div class="card" style="text-align:center; padding:40px; border: 2px solid var(--warning); background:rgba(245, 158, 11, 0.1);">🏆 ZWYCIĘZCA: <h3 style="color:var(--warning); margin-top:10px;">${lastCupWinner.name}</h3></div>`; else content.innerHTML = `<h2>Puchar Krajowy</h2><div class="card" style="text-align:center; padding:40px; color:var(--text-muted)">Rozgrywki rozpoczną się wkrótce...</div>`;
         } else {
-            content.innerHTML = `<h2>Puchar Polski - Runda ${cupRound+1}</h2><div class="card" style="padding:10px;">` + cupFixtures.map(m => `<div class="table-row"><span style="flex:1; text-align:right;">${m[0].name} <span class="ovr-badge">${window.getRawOVR(m[0])}</span></span> <b style="color:var(--border); margin:0 20px;">VS</b> <span style="flex:1;">${m[1] ? '<span class="ovr-badge" style="margin:0 10px 0 0;">'+window.getRawOVR(m[1])+'</span> ' + m[1].name : '<span style="color:var(--text-muted)">Wolny los</span>'}</span></div>`).join("") + `</div>`;
+            content.innerHTML = `<h2>Puchar Krajowy - Runda ${cupRound+1}</h2><div class="card" style="padding:10px;">` + cupFixtures.map(m => `<div class="table-row"><span style="flex:1; text-align:right;">${m[0].name} <span class="ovr-badge">${window.getRawOVR(m[0])}</span></span> <b style="color:var(--border); margin:0 20px;">VS</b> <span style="flex:1;">${m[1] ? '<span class="ovr-badge" style="margin:0 10px 0 0;">'+window.getRawOVR(m[1])+'</span> ' + m[1].name : '<span style="color:var(--text-muted)">Wolny los</span>'}</span></div>`).join("") + `</div>`;
         }
     }
     if (view === "europe") {
@@ -1043,7 +1242,8 @@ window.show = function(view, btn) {
         content.innerHTML = html;
     }
     if (view === "match") {
-        if(round >= 34) { content.innerHTML = `<h2>Koniec Sezonu!</h2><div class="card" style="text-align:center; padding:40px;"><button class="action" style="font-size:16px; padding:20px;" onclick="window.finishSeason()">PODSUMUJ SEZON I ROZDAJ AWANSE</button></div>`; return; }
+        let maxRounds = (playerTeam.div === 'PL' || playerTeam.div === 'ESP1') ? 38 : (playerTeam.div === 'CH' || playerTeam.div === 'ESP2') ? 42 : 34;
+        if(round >= maxRounds) { content.innerHTML = `<h2>Koniec Sezonu!</h2><div class="card" style="text-align:center; padding:40px;"><button class="action" style="font-size:16px; padding:20px;" onclick="window.finishSeason()">PODSUMUJ SEZON I ROZDAJ AWANSE</button></div>`; return; }
         
         let confBtn = !conferenceActive ? `<button class="action" style="background:var(--secondary); width:100%; margin-bottom:15px; font-size:14px; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);" onclick="window.holdConference()">🎤 Zwołaj Konferencję Prasową (+15% Morale, Ryzyko spadku po przegranej!)</button>` : `<div style="background:rgba(59, 130, 246, 0.2); color:var(--secondary); padding:10px; text-align:center; border-radius:8px; margin-bottom:15px; font-weight:bold; border: 1px solid var(--secondary);">🎤 Konferencja odbyta! Zespół jest zmotywowany, ale presja na wynik jest ogromna!</div>`;
 
@@ -1055,10 +1255,10 @@ window.show = function(view, btn) {
             content.innerHTML = `<h2>Europejskie Puchary</h2><h3 class="divider">${txt}</h3>${confBtn}<div class="match-scoreboard"><h3 style="color:#fff; margin:0;">${myMatchText}</h3></div><div style="display:flex; gap:15px;"><button class="action" style="flex:2; font-size:16px; padding:15px;" onclick="window.runEuroRound(false)">ROZEGRAJ (LIVE)</button><button class="action" style="flex:1; background:transparent; border:1px solid var(--border); color:var(--text-muted); box-shadow:none;" onclick="window.runEuroRound(true)">SZYBKI WYNIK</button></div><div id="res-box" style="margin-top:20px;">${lastMatchHTML}</div>`;
         } else if(isCupDay) {
             let m = cupFixtures.find(x => x[0] === playerTeam || x[1] === playerTeam);
-            content.innerHTML = `<h2>Puchar Polski</h2>${confBtn}<div class="match-scoreboard"><h3 style="color:#fff; margin:0;">${m ? m[0].name + ' vs ' + (m[1]?m[1].name:'Wolny los') : 'Nie bierzesz udziału'}</h3></div><div style="display:flex; gap:15px;"><button class="action" style="flex:2; font-size:16px; padding:15px;" onclick="window.runCupRound(false)">ROZEGRAJ (LIVE)</button><button class="action" style="flex:1; background:transparent; border:1px solid var(--border); color:var(--text-muted); box-shadow:none;" onclick="window.runCupRound(true)">SZYBKI WYNIK</button></div><div id="res-box" style="margin-top:20px;">${lastMatchHTML}</div>`;
+            content.innerHTML = `<h2>Puchar Krajowy</h2>${confBtn}<div class="match-scoreboard"><h3 style="color:#fff; margin:0;">${m ? m[0].name + ' vs ' + (m[1]?m[1].name:'Wolny los') : 'Nie bierzesz udziału'}</h3></div><div style="display:flex; gap:15px;"><button class="action" style="flex:2; font-size:16px; padding:15px;" onclick="window.runCupRound(false)">ROZEGRAJ (LIVE)</button><button class="action" style="flex:1; background:transparent; border:1px solid var(--border); color:var(--text-muted); box-shadow:none;" onclick="window.runCupRound(true)">SZYBKI WYNIK</button></div><div id="res-box" style="margin-top:20px;">${lastMatchHTML}</div>`;
         } else {
-            let myMatch = null; [schedEkl, sched1L, sched2L, sched3L1, sched3L2, sched3L3, sched3L4].forEach(s => { if(s[round]) { let found = s[round].find(x => x[0] === playerTeam || x[1] === playerTeam); if(found) myMatch = found; } });
-            content.innerHTML = `<h2>Mecz Ligowy (Kolejka ${round+1} / 34)</h2>${confBtn}<div class="match-scoreboard"><h3 style="color:#fff; margin:0; font-size:32px;">${myMatch ? myMatch[0].name + ' <span style="color:var(--text-muted); font-weight:400;">vs</span> ' + myMatch[1].name : 'Pauzujesz'}</h3></div><div style="display:flex; gap:15px;"><button class="action" style="flex:2; font-size:16px; padding:15px;" onclick="window.runRound(false)">ROZEGRAJ (LIVE)</button><button class="action" style="flex:1; background:transparent; border:1px solid var(--border); color:var(--text-muted); box-shadow:none;" onclick="window.runRound(true)">SZYBKI WYNIK</button></div><div id="res-box" style="margin-top:20px;">${lastMatchHTML}</div>`;
+            let myMatch = null; [schedPL, schedCH, schedESP1, schedESP2, schedEkl, sched1L, sched2L, sched3L1, sched3L2, sched3L3, sched3L4].forEach(s => { if(s[round]) { let found = s[round].find(x => x[0] === playerTeam || x[1] === playerTeam); if(found) myMatch = found; } });
+            content.innerHTML = `<h2>Mecz Ligowy (Kolejka ${round+1} / ${maxRounds})</h2>${confBtn}<div class="match-scoreboard"><h3 style="color:#fff; margin:0; font-size:32px;">${myMatch ? myMatch[0].name + ' <span style="color:var(--text-muted); font-weight:400;">vs</span> ' + myMatch[1].name : 'Pauzujesz'}</h3></div><div style="display:flex; gap:15px;"><button class="action" style="flex:2; font-size:16px; padding:15px;" onclick="window.runRound(false)">ROZEGRAJ (LIVE)</button><button class="action" style="flex:1; background:transparent; border:1px solid var(--border); color:var(--text-muted); box-shadow:none;" onclick="window.runRound(true)">SZYBKI WYNIK</button></div><div id="res-box" style="margin-top:20px;">${lastMatchHTML}</div>`;
         }
     }
     if (view === "infra") { content.innerHTML = `<h2>Rozbudowa Klubu</h2><div class="card table-row" style="padding:20px;"><div><h3 style="margin-bottom:5px;">🏟️ Stadion (Lvl ${infra.stadium})</h3><span style="font-size:13px; color:var(--text-muted)">Zwiększa wpływy z biletów co mecz.</span></div><button class="action upgrade" onclick="window.upgrade('stadium')">Ulepsz (${(infra.stadium * 5000000).toLocaleString()} zł)</button></div><div class="card table-row" style="padding:20px;"><div><h3 style="margin-bottom:5px;">🏥 Sztab Medyczny (Lvl ${infra.medical})</h3><span style="font-size:13px; color:var(--text-muted)">Szybsza regeneracja i leczenie po meczach.</span></div><button class="action upgrade" onclick="window.upgrade('medical')">Ulepsz (${(infra.medical * 3000000).toLocaleString()} zł)</button></div><div class="card table-row" style="padding:20px;"><div><h3 style="margin-bottom:5px;">⚙️ Akademia (Lvl ${infra.training})</h3><span style="font-size:13px; color:var(--text-muted)">Skuteczniejszy rozwój juniorów co sezon.</span></div><button class="action upgrade" onclick="window.upgrade('training')">Ulepsz (${(infra.training * 4000000).toLocaleString()} zł)</button></div>`; }
@@ -1074,251 +1274,4 @@ window.show = function(view, btn) {
                     <option value="MID">Pomocnik (MID)</option>
                     <option value="ATT">Napastnik (ATT)</option>
                 </select>
-                <select id="market-age" class="market-filter" onchange="window.searchMarket()">
-                    <option value="99">Każdy Wiek</option>
-                    <option value="21">U-21 (Młodzieżowiec)</option>
-                    <option value="25">Do 25 lat</option>
-                    <option value="30">Do 30 lat</option>
-                </select>
-                <select id="market-price" class="market-filter" onchange="window.searchMarket()">
-                    <option value="999999999">Każda Cena</option>
-                    <option value="1000000">Do 1 mln zł</option>
-                    <option value="5000000">Do 5 mln zł</option>
-                    <option value="15000000">Do 15 mln zł</option>
-                    <option value="50000000">Do 50 mln zł</option>
-                </select>
-            </div>
-            <div id="market-results"></div>
-        </div>
-        <h3 class="divider">Lista Transferowa (Twój zespół)</h3><div class="card" style="padding:10px;">` + playerTeam.players.map((p, i) => `
-            <div class="table-row">
-                <div style="display:flex; align-items:center; gap:15px;">
-                    <div style="width:40px; height:40px;">${window.getAvatarHTML(p.name, playerTeam.color)}</div>
-                    <div><b>${p.name}</b> <span class="stat-badge" style="background:var(--border);">${p.exactPos}</span> <span style="font-size:10px; color:var(--text-muted)">Poboczne: ${p.secPos.join(', ')}</span><br>
-                    <span style="font-size:11px; color:var(--text-muted)">OVR: <b style="color:var(--accent)">${p.skill}</b> | PAC: ${p.pac} | SHO: ${p.sho} | PAS: ${p.pas} | DEF: ${p.def} | PHY: ${p.phy} | Wiek: ${p.age}</span></div>
-                </div>
-                <button class="action" style="background:rgba(239, 68, 68, 0.2); color:var(--danger); border:1px solid rgba(239, 68, 68, 0.4); box-shadow:none;" onclick="window.sellP(${i})">Sprzedaj (${Math.floor(p.price * 0.8).toLocaleString()} zł)</button>
-            </div>`).join("") + `</div>`; setTimeout(window.searchMarket, 100);
-    }
-    if (view === "sponsors") {
-        document.getElementById("sponsor-badge").style.display = "none"; let html = `<h2>Sponsorzy i Finanse</h2>`;
-        if (currentSponsor) { html += `<div class="card highlight" style="background:rgba(16, 185, 129, 0.1); border-color:var(--accent);"><span style="color:var(--text-muted); font-size:12px; text-transform:uppercase;">Główny Sponsor</span><h3 style="margin:5px 0 15px 0; font-size:24px;">${currentSponsor.name}</h3><div style="font-size:14px;">Premia za sezon: <b style="color:var(--accent); font-size:18px;">${currentSponsor.amount.toLocaleString()} zł</b></div></div>`; } 
-        else { html += `<div class="card" style="color:var(--text-muted);">Brak sponsora. Graj dobrze, a oferty zaczną spływać.</div>`; }
-        html += `<h3 class="divider">Skrzynka Odbiorcza</h3>`;
-        if (sponsorOffers.length === 0) { html += `<div class="card" style="text-align:center; color:var(--text-muted)">Brak wiadomości.</div>`; } else { sponsorOffers.forEach((offer, i) => { html += `<div class="email-box"><h4>Poczta od: ${offer.name}</h4><p>${offer.msg}</p><div style="display:flex; gap:10px;"><button class="action" onclick="window.acceptSponsor(${i})">Podpisz Kontrakt</button><button class="action" style="background:transparent; border:1px solid var(--border); color:var(--text-muted); box-shadow:none;" onclick="window.rejectSponsor(${i})">Odrzuć</button></div></div>`; }); } content.innerHTML = html;
-    }
-    if (view === "stats") {
-        let allP = []; [eklTeams, l1Teams, l2Teams, l3G1Teams, l3G2Teams, l3G3Teams, l3G4Teams, worldTeams].forEach(l => l.forEach(t => { t.players.forEach(p => { p.clubName = t.name; p.leagueName = t.div; allP.push(p); }); }));
-        let bestS = allP.sort((a,b) => b.goals - a.goals).slice(0, 15);
-        let html = `<h2>Najlepsi Strzelcy (Globalnie)</h2><div class="card" style="padding:10px;">` + bestS.map((p, i) => `<div class="table-row"><div style="display:flex; align-items:center; gap:15px;"><span style="color:var(--text-muted); width:20px;">${i+1}.</span><div style="width:36px; height:36px;">${window.getAvatarHTML(p.name)}</div><div><b>${p.name}</b> <br><span style="font-size:11px;color:var(--text-muted);">${p.clubName} (${p.leagueName})</span></div></div><div style="text-align:right;"><span style="font-size:11px;color:var(--text-muted); display:block;">Mecze: ${p.matches || 0}</span> <b style="color:var(--accent); font-size:18px;">${p.goals} ⚽</b></div></div>`).join("") + `</div>`;
-        
-        html += `<h3 class="divider">Historia Mistrzów Ekstraklasy</h3>`;
-        if (history.length === 0) {
-            html += `<div class="card" style="text-align:center; color:var(--text-muted);">Brak danych. Rozegraj pierwszy sezon!</div>`;
-        } else {
-            html += `<div class="card" style="padding:10px;">` + history.map(h => `<div class="table-row"><div style="display:flex; align-items:center; gap:10px;"><span style="font-size:20px;">🏆</span> <b style="color:var(--warning); font-size:16px;">${h}</b></div></div>`).join("") + `</div>`;
-        }
-        content.innerHTML = html;
-    }
-};
-
-window.searchMarket = function() {
-    let el = document.getElementById('market-search'); 
-    let posEl = document.getElementById('market-pos');
-    let ageEl = document.getElementById('market-age');
-    let priceEl = document.getElementById('market-price');
-    
-    if(!el) return;
-    
-    let q = el.value.toLowerCase(); 
-    let fPos = posEl ? posEl.value : "";
-    let fAge = ageEl ? parseInt(ageEl.value) : 99;
-    let fPrice = priceEl ? parseInt(priceEl.value) : 999999999;
-    
-    let html = ""; let results = 0;
-    
-    if(q.length >= 2 || fPos !== "" || fAge !== 99 || fPrice !== 999999999) {
-        html += `<div style="display:grid; gap:10px;">`;
-        for(let l of [eklTeams, l1Teams, l2Teams, l3G1Teams, l3G2Teams, l3G3Teams, l3G4Teams, worldTeams]) { 
-            for(let t of l) { 
-                if(t === playerTeam) continue; 
-                for(let p of t.players) { 
-                    let matchQ = q === "" || p.name.toLowerCase().includes(q) || t.name.toLowerCase().includes(q);
-                    let matchPos = fPos === "" || p.pos === fPos;
-                    let matchAge = p.age <= fAge;
-                    let matchPrice = p.price <= fPrice;
-                    
-                    if(matchQ && matchPos && matchAge && matchPrice) { 
-                        if(results >= 40) break; 
-                        html += `<div class="card table-row" style="margin:0; padding:15px;"><div style="display:flex; align-items:center; gap:15px;"><div style="width:40px;height:40px;">${window.getAvatarHTML(p.name, t.color)}</div><div><b>${p.name}</b> <span class="stat-badge">${p.exactPos}</span> - <b style="color:var(--text-muted)">${t.name}</b><br><span style="font-size:11px; color:var(--text-muted)">Wiek: ${p.age} | Cena: <b style="color:#fff">${p.price.toLocaleString()} zł</b> | OVR: <b style="color:var(--accent)">${p.skill}</b> | PAC: ${p.pac} | SHO: ${p.sho} | PAS: ${p.pas} | DEF: ${p.def} | PHY: ${p.phy}</span></div></div><button class="action" onclick="window.buyPlayerGlobal('${t.id}', '${p.id}')">Kup</button></div>`; 
-                        results++; 
-                    } 
-                } 
-            } 
-        }
-        html += `</div>`; 
-        if(results === 0) html = `<div style="text-align:center; color:var(--text-muted); padding:20px;">Brak wyników spełniających wybrane kryteria.</div>`;
-    } else {
-        html = `<div style="text-align:center; color:var(--text-muted); padding:20px;">Wpisz min. 2 znaki lub użyj filtrów, by szukać.</div>`;
-    }
-    document.getElementById('market-results').innerHTML = html;
-};
-
-// --- SYSTEM NEGOCJACJI TRANSFEROWYCH ---
-window.buyPlayerGlobal = function(teamId, playerId) {
-    let targetTeam = null; for(let l of [eklTeams, l1Teams, l2Teams, l3G1Teams, l3G2Teams, l3G3Teams, l3G4Teams, worldTeams]) { let found = l.find(t => t.id == teamId); if(found) { targetTeam = found; break; } }
-    if(!targetTeam) return;
-    let pIdx = targetTeam.players.findIndex(p => p.id == playerId); if(pIdx === -1) return; let p = targetTeam.players[pIdx];
-    let skillDiff = p.skill - getTeamSkill(playerTeam); let refusalChance = 0.05; 
-    if (skillDiff > 15) refusalChance += 0.8; else if (skillDiff > 8) refusalChance += 0.4;
-    if (targetTeam.div === 'EUR' && playerTeam.div !== 'EKL') refusalChance += 0.5;
-
-    // Negocjacje krok 1: Zainteresowanie
-    if (Math.random() < refusalChance) { 
-        alert(`${p.name} odrzucił ofertę rozmów kontraktowych. Zawodnik nie jest w tym momencie zainteresowany zmianą otoczenia.`); 
-        return; 
-    }
-
-    // Negocjacje krok 2: Oferta i Wycena Klubu SI
-    let minWillingPrice = Math.floor(p.price * (0.85 + Math.random() * 0.6)); // Klub sprzeda od 85% do 145% wartości rynkowej
-    let offerStr = prompt(`NEGOCJACJE TRANSFEROWE\nKlub: ${targetTeam.name}\nZawodnik: ${p.name}\nWartość rynkowa: ${p.price.toLocaleString()} zł\nTwój budżet: ${budget.toLocaleString()} zł\n\nPodaj swoją ofertę kwotową (zł):`, p.price);
-
-    if(!offerStr) return;
-    let offer = parseInt(offerStr.replace(/\s+/g, '').replace(/\D/g,''));
-    if(isNaN(offer) || offer <= 0) return;
-
-    if (offer < minWillingPrice * 0.75) {
-        alert(`Zarząd ${targetTeam.name} poczuł się obrażony Twoją ofertą (${offer.toLocaleString()} zł) i natychmiast zerwał negocjacje! Oczekiwali kwoty bliżej ${minWillingPrice.toLocaleString()} zł.`);
-        return;
-    } else if (offer < minWillingPrice) {
-        let counter = Math.floor((offer + minWillingPrice) / 2);
-        let agree = confirm(`Zarząd ${targetTeam.name} odrzuca ofertę w wysokości ${offer.toLocaleString()} zł, ale są gotowi na kompromis.\n\nIch kontroferta to: ${counter.toLocaleString()} zł.\nCzy akceptujesz te warunki?`);
-        if(agree) offer = counter;
-        else { alert("Odrzuciłeś kontrofertę. Negocjacje transferowe zakończone fiaskiem."); return; }
-    }
-
-    // Negocjacje krok 3: Sfinalizowanie
-    if(budget >= offer) { 
-        budget -= offer; targetTeam.players.splice(pIdx, 1); targetTeam.lineup = targetTeam.lineup.filter(x => x && x.id !== p.id); 
-        if(targetTeam.players.length < 15) { let lvl = targetTeam.div === 'EKL' ? 0 : targetTeam.div === '1L' ? 1 : targetTeam.div === '2L' ? 2 : targetTeam.div.startsWith('3L') ? 3 : -2; let regen = genPlayer(lvl, null, targetTeam.div === 'EUR'); targetTeam.players.push(regen); if(targetTeam.lineup.filter(x=>x).length < 11) { regen.status = "W 11"; targetTeam.lineup.push(regen); } } 
-        p.status = "Rezerwa"; p.acclim = 40; p.price = offer; // Aktualizujemy jego obecną cenę do ceny ostatniego transferu
-        playerTeam.players.push(p); playerTeam.chemistry = Math.max(0, playerTeam.chemistry - 10); targetTeam.chemistry = Math.max(0, targetTeam.chemistry - 10); 
-        window.show("market"); alert(`Transakcja sfinalizowana! ${p.name} podpisuje kontrakt i dołącza do Twojego zespołu za kwotę ${offer.toLocaleString()} zł.`); 
-    } else alert(`Brak środków na koncie na pokrycie operacji! Wymagane: ${offer.toLocaleString()} zł.`);
-};
-
-window.sellP = function(i) { let p = playerTeam.players[i]; if(p.status === "W 11") { alert("Zdejmij gracza z pierwszego składu!"); return; } budget += Math.floor(p.price * 0.8); playerTeam.players.splice(i, 1); playerTeam.chemistry = Math.max(0, playerTeam.chemistry - 5); window.show("market"); };
-window.healP = function(i) { let p = playerTeam.players[i]; let cost = p.injury * 50000; if(budget >= cost) { budget -= cost; p.injury = 0; window.show("lineup"); } else alert("Brak środków!"); };
-window.toggleP = function(i) { let p = playerTeam.players[i]; if (p.status === "Rezerwa") { if(p.injury > 0) { alert("Gracz kontuzjowany!"); return; } if(p.suspended > 0) { alert("Zawieszenie za kartki!"); return; } if (playerTeam.lineup.filter(x=>x).length < 11) { p.status = "W 11"; playerTeam.lineup.push(p); } } else { p.status = "Rezerwa"; let slotIdx = playerTeam.lineup.findIndex(x => x && x.id === p.id); if (slotIdx !== -1) playerTeam.lineup[slotIdx] = null; } window.show("lineup"); };
-window.moveToReserves = function(idx) { let p = playerTeam.players[idx]; if(p.status === "W 11") { alert("Zdejmij z podstawowego składu zanim przeniesiesz!"); return; } playerTeam.players.splice(idx, 1); p.status = "Rezerwa"; playerTeam.reserveTeam.players.push(p); if(playerTeam.players.length < 15) playerTeam.players.push(genPlayer(1, 18, false)); window.show("reserves"); };
-window.moveToMain = function(idx) { let p = playerTeam.reserveTeam.players[idx]; if(p.status === "W 11") { let slot = playerTeam.reserveTeam.lineup.indexOf(p); if(slot !== -1) playerTeam.reserveTeam.lineup[slot] = null; } playerTeam.reserveTeam.players.splice(idx, 1); p.status = "Rezerwa"; playerTeam.players.push(p); if(playerTeam.reserveTeam.players.length < 15) playerTeam.reserveTeam.players.push(genPlayer(3, 18, false)); window.show("reserves"); };
-window.recruitYouth = function() { if (budget >= 500000) { budget -= 500000; let p = genPlayer(Math.max(-2, 3 - infra.training), 16, false); p.status = "Rezerwa"; playerTeam.players.push(p); playerTeam.chemistry = Math.max(0, playerTeam.chemistry - 2); window.show("team"); alert(`Akademia wydała nowy talent: ${p.name} (Wiek: 16, OVR: ${p.skill}).`); } else alert("Brak środków (wymagane 500 000 zł)!"); };
-window.setF = function(f) { formation = f; window.show("tactics"); }; window.setS = function(s) { style = s; window.show("tactics"); };
-window.upgrade = function(type) { let cost = type === 'stadium' ? infra.stadium * 5000000 : type === 'medical' ? infra.medical * 3000000 : infra.training * 4000000; if(budget >= cost) { budget -= cost; infra[type]++; window.show("infra"); } else alert("Brak środków ("+cost.toLocaleString()+" zł)"); };
-window.acceptSponsor = function(i) { currentSponsor = sponsorOffers[i]; sponsorOffers = []; window.show("sponsors"); }; window.rejectSponsor = function(i) { sponsorOffers.splice(i, 1); window.show("sponsors"); };
-
-// --- SYSTEM KARY ZA PIROTECHNIKĘ ---
-window.checkPyro = function(isEuro) {
-    if(Math.random() < 0.08) { // 8% szans na odpaskę pyro na Twoim meczu
-        let fine = isEuro ? (100000 + Math.floor(Math.random() * 300000)) : (20000 + Math.floor(Math.random() * 80000));
-        budget -= fine;
-        let org = isEuro ? "UEFA" : "Komisja Ligi";
-        setTimeout(() => alert(`🧨 KOMUNIKAT KARY FINANSOWEJ (${org}):\nKibice na Twoim meczu użyli masy niedozwolonych środków pirotechnicznych, doprowadzając do niebezpiecznych przerw w grze.\nNa klub nałożono surową karę w wysokości: -${fine.toLocaleString()} zł.`), 400);
-        window.updateUI();
-    }
-};
-
-window.runRound = function(isFast = false) {
-    if(playerTeam.lineup.filter(x=>x).length < 11) { alert("Uzupełnij skład do 11 graczy!"); return; }
-    let resH = `<h3 class="divider">Pozostałe wyniki z kolejki</h3><div class="card" style="padding:10px;">`; let myMatchH = "", myMatchA = "", myMatchHs = 0, myMatchAs = 0, myCommentary = []; budget += (infra.stadium * 150000);
-    [schedEkl, sched1L, sched2L, sched3L1, sched3L2, sched3L3, sched3L4].forEach(s => { if(s[round]) { s[round].forEach(m => { let r = simMatch(m[0], m[1]); if(m[0] === playerTeam || m[1] === playerTeam) { myMatchH = m[0].name; myMatchA = m[1].name; myMatchHs = r.hs; myMatchAs = r.as; myCommentary = r.commentary; } else if(Math.random() > 0.6) { resH += `<div class="table-row"><span style="flex:1;text-align:right">${m[0].name}</span> <b style="color:var(--text-muted); margin:0 15px;">${r.hs}:${r.as}</b> <span style="flex:1">${m[1].name}</span></div>`; } }); } });
-    resH += `</div>`; if (Math.random() < 0.15 && !currentSponsor && playerTeam.morale > 70) generateSponsorOffer();
-    if (myMatchH !== "") {
-        if(isFast) { let goalsHtml = myCommentary.filter(c => c.isGoal).map(c => c.text).join('<br><div style="border-bottom:1px dashed var(--border); margin: 6px 0"></div>'); if(!goalsHtml) goalsHtml = '<div style="text-align:center; color:var(--text-muted);">Mecz zakończony bezbramkowym remisem.</div>'; lastMatchHTML = `<div class="match-scoreboard"><span style="font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:10px;">Wynik Końcowy</span><h3 style="font-size:32px; margin:0;">${myMatchH} <span class="score-num">${myMatchHs}:${myMatchAs}</span> ${myMatchA}</h3></div><div id="live-commentary" style="height:auto; max-height:300px; margin-bottom:20px;">${goalsHtml}</div>${resH}`; conferenceActive = false; round++; window.show("match"); window.checkPyro(false); } 
-        else { window.playLiveMatch(`Kolejka Ligowa - ${round+1} / 34`, myMatchH, myMatchA, myCommentary, resH, () => { conferenceActive = false; round++; lastMatchHTML = ""; window.show("match"); window.checkPyro(false); }); }
-    } else { conferenceActive = false; round++; window.show("match"); }
-};
-
-window.runEuroRound = function(isFast = false) {
-    let resH = `<h3 class="divider">Wyniki na innych stadionach</h3><div class="card" style="padding:10px;">`; let myMatchH = "", myMatchA = "", myMatchHs = 0, myMatchAs = 0, myCommentary = [];
-    if (euroRound === 0) { 
-        let lmRes = simMatch(euroData.qual[0].pl, euroData.qual[0].opp, true); if(euroData.qual[0].pl === playerTeam) { myMatchH = euroData.qual[0].pl.name; myMatchA = euroData.qual[0].opp.name; myMatchHs = lmRes.hs; myMatchAs = lmRes.as; myCommentary = lmRes.commentary; } else { resH += `<div class="table-row"><span style="flex:1;text-align:right">${euroData.qual[0].pl.name}</span> <b style="margin:0 15px;">${lmRes.hs}:${lmRes.as}</b> <span style="flex:1">${euroData.qual[0].opp.name}</span></div>`; } if (lmRes.hs > lmRes.as || (lmRes.hs === lmRes.as && Math.random() > 0.5)) euroData.lm.teams.push(euroData.qual[0].pl); else { euroData.le.teams.push(euroData.qual[0].pl); euroData.lm.teams.push(euroData.qual[0].opp); }
-        let lkRes = simMatch(euroData.qual[1].pl, euroData.qual[1].opp, true); if(euroData.qual[1].pl === playerTeam) { myMatchH = euroData.qual[1].pl.name; myMatchA = euroData.qual[1].opp.name; myMatchHs = lkRes.hs; myMatchAs = lkRes.as; myCommentary = lkRes.commentary; } else { resH += `<div class="table-row"><span style="flex:1;text-align:right">${euroData.qual[1].pl.name}</span> <b style="margin:0 15px;">${lkRes.hs}:${lkRes.as}</b> <span style="flex:1">${euroData.qual[1].opp.name}</span></div>`; } if (lkRes.hs > lkRes.as || (lkRes.hs === lkRes.as && Math.random() > 0.5)) euroData.lk.teams.push(euroData.qual[1].pl); else euroData.lk.teams.push(euroData.qual[1].opp); 
-        
-        let availTeams = worldTeams.sort(() => 0.5 - Math.random()); let addTeams = (arr, limit) => { for(let t of availTeams) { if(arr.length >= limit) break; if(!euroData.lm.teams.includes(t) && !euroData.le.teams.includes(t) && !euroData.lk.teams.includes(t)) arr.push(t); } }; 
-        addTeams(euroData.lm.teams, 36); addTeams(euroData.le.teams, 36); addTeams(euroData.lk.teams, 36); 
-        euroData.lm.fixtures = genSched(euroData.lm.teams).slice(0, 8); euroData.le.fixtures = genSched(euroData.le.teams).slice(0, 8); euroData.lk.fixtures = genSched(euroData.lk.teams).slice(0, 8);
-    } else if (euroRound >= 1 && euroRound <= 8) { 
-        let day = euroRound - 1; ['lm', 'le', 'lk'].forEach(cup => { euroData[cup].fixtures[day].forEach(m => { let r = simMatch(m[0], m[1]); if(m[0] === playerTeam || m[1] === playerTeam) { myMatchH = m[0].name; myMatchA = m[1].name; myMatchHs = r.hs; myMatchAs = r.as; myCommentary = r.commentary; } else if(m[0].div === 'EKL' || m[1].div === 'EKL') { resH += `<div class="table-row"><span style="flex:1;text-align:right">${m[0].name}</span> <b style="margin:0 15px;">${r.hs}:${r.as}</b> <span style="flex:1">${m[1].name}</span></div>`; } if (r.hs > r.as) m[0].euroPoints += 3; else if (r.as > r.hs) m[1].euroPoints += 3; else { m[0].euroPoints += 1; m[1].euroPoints += 1; } }); });
-        if (euroRound === 8) { ['lm', 'le', 'lk'].forEach(cup => { let sorted = [...euroData[cup].teams].sort((a,b) => b.euroPoints - a.euroPoints || Math.random() - 0.5); let top16 = sorted.slice(0, 16); for(let i=0; i<8; i++) euroData[cup].ko.push([top16[i], top16[15-i]]); }); }
-    } else if (euroRound >= 9 && euroRound <= 12) { 
-        ['lm', 'le', 'lk'].forEach(cup => { let winners = []; euroData[cup].ko.forEach(m => { let r = simMatch(m[0], m[1], true); if(m[0] === playerTeam || m[1] === playerTeam) { myMatchH = m[0].name; myMatchA = m[1].name; myMatchHs = r.hs; myMatchAs = r.as; myCommentary = r.commentary; } if(r.hs > r.as) winners.push(m[0]); else if(r.as > r.hs) winners.push(m[1]); else winners.push(Math.random() > 0.5 ? m[0] : m[1]); }); euroData[cup].ko = []; if(winners.length === 1) { euroData[cup].ko.push([winners[0]]); if(winners[0] === playerTeam) budget += 50000000; } else { for(let i=0; i<winners.length; i+=2) euroData[cup].ko.push([winners[i], winners[i+1]]); } });
-    }
-    resH += `</div>`;
-    if (myMatchH !== "") {
-        if(isFast) { let goalsHtml = myCommentary.filter(c => c.isGoal).map(c => c.text).join('<br><div style="border-bottom:1px dashed var(--border); margin: 6px 0"></div>'); if(!goalsHtml) goalsHtml = '<div style="text-align:center; color:var(--text-muted);">Brak bramek.</div>'; lastMatchHTML = `<div class="match-scoreboard"><span style="font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:10px;">EUROPEJSKIE PUCHARY</span><h3 style="font-size:32px; margin:0;">${myMatchH} <span class="score-num">${myMatchHs}:${myMatchAs}</span> ${myMatchA}</h3></div><div id="live-commentary" style="height:auto; max-height:300px; margin-bottom:20px;">${goalsHtml}</div>${resH}`; conferenceActive = false; euroRound++; round++; window.show("match"); window.checkPyro(true); } 
-        else { window.playLiveMatch(`Puchary Europejskie`, myMatchH, myMatchA, myCommentary, resH, () => { conferenceActive = false; euroRound++; round++; lastMatchHTML = ""; window.show("match"); window.checkPyro(true); }); }
-    } else { conferenceActive = false; euroRound++; round++; window.show("match"); }
-};
-
-window.runCupRound = function(isFast = false) {
-    let winners = []; let myMatchH = "", myMatchA = "", myMatchHs = 0, myMatchAs = 0, myCommentary = []; let resH = `<h3 class="divider">Wyniki Pucharu Polski</h3><div class="card" style="padding:10px;">`;
-    cupFixtures.forEach(m => {
-        if(!m[1]) { winners.push(m[0]); return; } let r = simMatch(m[0], m[1], true); if(m[0] === playerTeam || m[1] === playerTeam) { myMatchH = m[0].name; myMatchA = m[1].name; myMatchHs = r.hs; myMatchAs = r.as; myCommentary = r.commentary; } else { if(Math.random() > 0.8) resH += `<div class="table-row"><span style="flex:1;text-align:right">${m[0].name}</span> <b style="margin:0 15px;">${r.hs}:${r.as}</b> <span style="flex:1">${m[1].name}</span></div>`; } if(r.hs > r.as) winners.push(m[0]); else if(r.as > r.hs) winners.push(m[1]); else winners.push(Math.random() > 0.5 ? m[0] : m[1]); 
-    }); resH += `</div>`; cupFixtures = [];
-    if(winners.length === 1) { lastCupWinner = winners[0]; } else { for(let i=0; i<winners.length; i+=2) { if(winners[i+1]) cupFixtures.push([winners[i], winners[i+1]]); else cupFixtures.push([winners[i], null]); } }
-    if (myMatchH !== "") {
-        if(isFast) { let goalsHtml = myCommentary.filter(c => c.isGoal).map(c => c.text).join('<br><div style="border-bottom:1px dashed var(--border); margin: 6px 0"></div>'); if(!goalsHtml) goalsHtml = '<div style="text-align:center; color:var(--text-muted);">Brak bramek.</div>'; lastMatchHTML = `<div class="match-scoreboard"><span style="font-size:12px; color:var(--warning); text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:10px;">PUCHAR POLSKI</span><h3 style="font-size:32px; margin:0;">${myMatchH} <span class="score-num">${myMatchHs}:${myMatchAs}</span> ${myMatchA}</h3></div><div id="live-commentary" style="height:auto; max-height:300px; margin-bottom:20px;">${goalsHtml}</div>${resH}`; conferenceActive = false; cupRound++; round++; window.show("match"); window.checkPyro(false); } 
-        else { window.playLiveMatch(`Puchar Polski`, myMatchH, myMatchA, myCommentary, resH, () => { conferenceActive = false; cupRound++; round++; lastMatchHTML = ""; window.show("match"); window.checkPyro(false); }); }
-    } else { conferenceActive = false; cupRound++; round++; window.show("match"); }
-};
-
-function processAITransfers() {
-    let allLeagues = [eklTeams, l1Teams, l2Teams, l3G1Teams, l3G2Teams, l3G3Teams, l3G4Teams, worldTeams]; let allTeams = []; allLeagues.forEach(l => allTeams.push(...l));
-    let derbies = [ ["Legia Warszawa", "Polonia Warszawa"], ["Wisła Kraków", "Cracovia"], ["ŁKS Łódź", "Widzew Łódź"], ["Lech Poznań", "Warta Poznań"], ["Real Madryt", "Atletico Madryt"], ["Manchester City", "Manchester United"], ["AC Milan", "Inter Mediolan"], ["Arsenal FC", "Tottenham"], ["Bayern Monachium", "Borussia Dortmund"] ];
-    allTeams.forEach(buyer => {
-        if (buyer === playerTeam) return;
-        if (Math.random() < 0.20 && buyer.players.length < 25) {
-            let seller = allTeams[Math.floor(Math.random() * allTeams.length)]; if (seller === buyer || seller === playerTeam) return;
-            let isDerby = derbies.some(d => (d.includes(buyer.name) && d.includes(seller.name))); if (isDerby) return;
-            let pIdx = Math.floor(Math.random() * seller.players.length); let p = seller.players[pIdx];
-            seller.players.splice(pIdx, 1); seller.lineup = seller.lineup.filter(x => x && x.id !== p.id);
-            if (seller.players.length < 15) { let lvl = seller.div === 'EKL' ? 0 : seller.div === '1L' ? 1 : seller.div === '2L' ? 2 : seller.div.startsWith('3L') ? 3 : -2; let regen = genPlayer(lvl, 18, seller.div === 'EUR'); seller.players.push(regen); if (seller.lineup.filter(x=>x).length < 11) { regen.status = "W 11"; seller.lineup.push(regen); } }
-            p.status = "Rezerwa"; buyer.players.push(p); buyer.chemistry = Math.max(0, buyer.chemistry - 5); seller.chemistry = Math.max(0, seller.chemistry - 5);
-        }
-    });
-}
-
-window.finishSeason = function() {
-    let sE = [...eklTeams].sort((a,b) => b.points - a.points); let s1 = [...l1Teams].sort((a,b) => b.points - a.points); let s2 = [...l2Teams].sort((a,b) => b.points - a.points);
-    let s3_1 = [...l3G1Teams].sort((a,b) => b.points - a.points); let s3_2 = [...l3G2Teams].sort((a,b) => b.points - a.points); let s3_3 = [...l3G3Teams].sort((a,b) => b.points - a.points); let s3_4 = [...l3G4Teams].sort((a,b) => b.points - a.points);
-    let eklTop = [...sE]; history.push(`Sezon ${season}: Mistrz - ${sE[0].name}`);
-
-    if (sE[0] === playerTeam) { fireConfetti(); }
-
-    if (currentSponsor) { budget += currentSponsor.amount; alert(`Sponsor "${currentSponsor.name}" przelał na konto ${currentSponsor.amount.toLocaleString()} zł za sezon!`); currentSponsor = null; }
-
-    let relE = sE.splice(-3); let pro1 = s1.splice(0, 3); let rel1 = s1.splice(-4); let pro2 = s2.splice(0, 4); let rel2 = s2.splice(-4);
-    let pro3_1 = s3_1.splice(0, 1); let pro3_2 = s3_2.splice(0, 1); let pro3_3 = s3_3.splice(0, 1); let pro3_4 = s3_4.splice(0, 1);
-
-    eklTeams = [...sE, ...pro1]; l1Teams = [...s1, ...pro2, ...relE]; l2Teams = [...s2, ...pro3_1, ...pro3_2, ...pro3_3, ...pro3_4, ...rel1];
-    l3G1Teams = [...s3_1, rel2[0]]; l3G2Teams = [...s3_2, rel2[1]]; l3G3Teams = [...s3_3, rel2[2]]; l3G4Teams = [...s3_4, rel2[3]];
-
-    let processPlayers = (t, isFor) => { t.players.forEach(p => { p.age++; p.goals = 0; p.matches = 0; p.injury = 0; p.suspended = 0; p.fatigue = 100; if(p.age < 28 && p.skill < p.potential) p.skill += Math.floor(Math.random() * (t===playerTeam ? infra.training + 1 : 2)); else if(p.age > 32) p.skill -= Math.floor(Math.random() * 3); if(p.age > 36 && Math.random() > 0.5) { let lvl = t.div==='EKL'?0 : t.div==='1L'?1 : t.div==='2L'?2 : t.div.startsWith('3L')?3 : -2; Object.assign(p, genPlayer(lvl, 17, isFor)); } p.price = window.calculatePrice(p.skill, p.age, p.pos); }); };
-    [eklTeams, l1Teams, l2Teams, l3G1Teams, l3G2Teams, l3G3Teams, l3G4Teams].forEach((l, idx) => { let divName = ["EKL", "1L", "2L", "3L1", "3L2", "3L3", "3L4"][idx]; l.forEach(t => { t.div = divName; t.points = 0; processPlayers(t, false); }); });
-    worldTeams.forEach(t => { t.points = 0; t.euroPoints = 0; processPlayers(t, true); }); processAITransfers(); 
-
-    let plChamp = eklTop[0], plRun = eklTop[1], pl3 = eklTop[2], pl4 = eklTop[3]; let plCup = lastCupWinner; if (!plCup || [plChamp, plRun, pl3, pl4].includes(plCup)) plCup = eklTop[4]; 
-    initEuro(plChamp, plRun, pl3, pl4, plCup); lastCupWinner = null; season++; round = 0; budget += 10000000; 
-    document.getElementById("seasonBox").innerText = "Sezon " + season; lastMatchHTML = ""; 
-    schedEkl = genSched(eklTeams); sched1L = genSched(l1Teams); sched2L = genSched(l2Teams); sched3L1 = genSched(l3G1Teams); sched3L2 = genSched(l3G2Teams); sched3L3 = genSched(l3G3Teams); sched3L4 = genSched(l3G4Teams);
-    initCup(); window.show("team");
-};
-
-function initCup() { let allPolishTeams = [...eklTeams, ...l1Teams, ...l2Teams, ...l3G1Teams, ...l3G2Teams, ...l3G3Teams, ...l3G4Teams]; let shuffled = allPolishTeams.sort(() => 0.5 - Math.random()); cupFixtures = []; for(let i=0; i<shuffled.length; i+=2) { if(shuffled[i+1]) cupFixtures.push([shuffled[i], shuffled[i+1]]); else cupFixtures.push([shuffled[i], null]); } cupRound = 0; }
-function genSched(list) { let t = [...list], res = []; for (let i = 0; i < t.length - 1; i++) { let m = []; for (let j = 0; j < t.length / 2; j++) m.push([t[j], t[t.length - 1 - j]]); res.push(m); t.splice(1, 0, t.pop()); } return [...res, ...res.map(rd => rd.map(m => [m[1], m[0]]))]; }
-
-initStartScreen();
-</script>
-</body>
-</html>
+                <select id="
